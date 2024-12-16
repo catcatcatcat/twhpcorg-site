@@ -1,3 +1,17 @@
+/**
+ * Main routing and content loading module
+ * 
+ * Content Loading:
+ * - Content is loaded from markdown files in content/{lang}/ directory
+ * - URLs are normalized to ensure proper resource loading
+ * - All static resources (CSS, JS) use absolute paths from root
+ * 
+ * Routing:
+ * - Hash-based routing (#home, #about, etc.)
+ * - Language prefix in URL determines content language
+ * - Falls back to localStorage or 'zh' if no valid language specified
+ */
+
 // Initialize Showdown converter
 const converter = new showdown.Converter({
     tables: true,
@@ -8,7 +22,7 @@ const converter = new showdown.Converter({
 // Router function to handle navigation
 async function router() {
     const hash = window.location.hash || '#home';
-    const lang = getCurrentLanguage();
+    const lang = getCurrentLanguage(); // This now handles URL correction
     const page = hash.slice(1) || 'home';
     
     try {

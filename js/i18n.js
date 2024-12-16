@@ -1,3 +1,17 @@
+/**
+ * Language handling and internationalization module
+ * 
+ * URL Format:
+ * - Canonical format: /{lang}#{page} (e.g., /zh#home, /en#about)
+ * - No trailing slashes are used
+ * - Only 'zh' and 'en' are valid language codes
+ * 
+ * URL Normalization:
+ * - Invalid paths (e.g., /jp#home, /xyz#home) are redirected to /{defaultLang}#home
+ * - Trailing slashes are removed
+ * - Language preference is stored in localStorage
+ */
+
 // Internationalization configuration
 const i18n = {
     zh: {
@@ -60,11 +74,26 @@ const i18n = {
 
 // Get current language from URL or localStorage
 function getCurrentLanguage() {
-    const urlLang = window.location.pathname.split('/')[1];
+    // Remove trailing slash if present and get the language part
+    const path = window.location.pathname.replace(/\/$/, '');
+    const urlLang = path.split('/')[1];
+    
     if (urlLang === 'en' || urlLang === 'zh') {
         return urlLang;
     }
-    return localStorage.getItem('language') || 'zh';
+    
+    const savedLang = localStorage.getItem('language');
+    if (savedLang === 'en' || savedLang === 'zh') {
+        // If we have a saved valid language, redirect immediately
+        const newPath = `/${savedLang}${window.location.hash || '#home'}`;
+        history.replaceState({}, '', newPath);
+        return savedLang;
+    }
+    
+    // Default to zh and redirect immediately
+    const newPath = `/zh${window.location.hash || '#home'}`;
+    history.replaceState({}, '', newPath);
+    return 'zh';
 }
 
 // Initialize language settings
@@ -78,13 +107,13 @@ function switchLanguage(lang) {
     setLanguage(lang);
     localStorage.setItem('language', lang);
     
-    // Update URL to reflect language change
-    const currentPath = window.location.pathname.split('/').slice(2).join('/');
-    const newPath = `/${lang}/${currentPath}`;
+    // Keep the hash but update the language prefix
+    const currentHash = window.location.hash || '#home';
+    const newPath = `/${lang}${currentHash}`;
     history.pushState({}, '', newPath);
     
     // Update content
-    updateContent(lang);
+    router();
 }
 
 // Set language in UI
