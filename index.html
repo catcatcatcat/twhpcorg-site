@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWHPC - Taiwan High Performance Computing Education Association</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Showdown.js for Markdown parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/i18n.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="social-links">
+                    <a href="#" class="social-link">GitHub</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">YouTube</a>
+                </div>
+                <div class="language-switcher">
+                    <button onclick="switchLanguage('zh')" class="lang-btn active">中文</button>
+                    <button onclick="switchLanguage('en')" class="lang-btn">EN</button>
+                </div>
+            </div>
+        </div>
+        <div class="main-header container">
+            <div class="logo">TWHPC</div>
+            <nav class="main-nav">
+                <a href="#" class="nav-link" data-i18n="nav.home">首頁</a>
+                <a href="#about" class="nav-link" data-i18n="nav.about">關於我們</a>
+                <a href="#projects" class="nav-link" data-i18n="nav.projects">專案與研究</a>
+                <a href="#education" class="nav-link" data-i18n="nav.education">教育與培訓</a>
+                <a href="#join" class="nav-link" data-i18n="nav.join">加入我們</a>
+                <a href="#news" class="nav-link" data-i18n="nav.news">最新消息</a>
+            </nav>
+            <button class="donate-btn">Donate</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <div class="container">
+                <div id="hero-content"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div id="markdown-content"></div>
+        </div>
+        
+        <section class="features">
+            <div class="container">
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3 data-i18n="features.talent">人才培育</h3>
+                        <p data-i18n="features.talentDesc">建立完整的培訓系統</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 data-i18n="features.research">開放研究</h3>
+                        <p data-i18n="features.researchDesc">推動開源專案發展</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 data-i18n="features.education">教育培訓</h3>
+                        <p data-i18n="features.educationDesc">提供專業課程與工作坊</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 data-i18n="features.collaboration">產學合作</h3>
+                        <p data-i18n="features.collaborationDesc">促進產業與學術交流</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>TWHPC</h4>
+                    <p>&copy; 2024 Taiwan High Performance Computing Education Association</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer.quickLinks">快速連結</h4>
+                    <a href="#about" data-i18n="nav.about">關於我們</a>
+                    <a href="#projects" data-i18n="nav.projects">專案與研究</a>
+                    <a href="#join" data-i18n="nav.join">加入我們</a>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer.contact">聯絡我們</h4>
+                    <p>Email: contact@twhpc.org</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
