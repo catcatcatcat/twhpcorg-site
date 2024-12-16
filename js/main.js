@@ -12,7 +12,14 @@ async function router() {
     const page = hash.slice(1) || 'home';
     
     try {
-        const response = await fetch(`content/${lang}/${page}.md`);
+        // First try the direct page name
+        let response = await fetch(`content/${lang}/${page}.md`);
+        
+        // If not found, try with 'about' for 'about-us'
+        if (!response.ok && page === 'about-us') {
+            response = await fetch(`content/${lang}/about.md`);
+        }
+        
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const markdown = await response.text();
         const html = converter.makeHtml(markdown);
