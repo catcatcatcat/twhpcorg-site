@@ -1,5 +1,4 @@
 from http.server import HTTPServer, SimpleHTTPRequestHandler
-import sys
 
 class CORSRequestHandler(SimpleHTTPRequestHandler):
     def end_headers(self):

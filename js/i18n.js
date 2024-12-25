@@ -2,14 +2,9 @@
  * Language handling and internationalization module
  * 
  * URL Format:
- * - Canonical format: /{lang}#{page} (e.g., /zh#home, /en#about)
- * - No trailing slashes are used
+ * - Uses URL parameter: ?lang=xx (e.g., ?lang=zh, ?lang=en)
+ * - Fallback to localStorage if no URL parameter
  * - Only 'zh' and 'en' are valid language codes
- * 
- * URL Normalization:
- * - Invalid paths (e.g., /jp#home, /xyz#home) are redirected to /{defaultLang}#home
- * - Trailing slashes are removed
- * - Language preference is stored in localStorage
  */
 
 // Internationalization configuration
@@ -74,25 +69,21 @@ const i18n = {
 
 // Get current language from URL or localStorage
 function getCurrentLanguage() {
-    // Remove trailing slash if present and get the language part
-    const path = window.location.pathname.replace(/\/$/, '');
-    const urlLang = path.split('/')[1];
-    
-    if (urlLang === 'en' || urlLang === 'zh') {
+    // First try to get from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLang = urlParams.get('lang');
+    if (urlLang === 'zh' || urlLang === 'en') {
+        localStorage.setItem('language', urlLang); // Remember the choice
         return urlLang;
     }
     
+    // Then try localStorage
     const savedLang = localStorage.getItem('language');
-    if (savedLang === 'en' || savedLang === 'zh') {
-        // If we have a saved valid language, redirect immediately
-        const newPath = `/${savedLang}${window.location.hash || '#home'}`;
-        history.replaceState({}, '', newPath);
+    if (savedLang === 'zh' || savedLang === 'en') {
         return savedLang;
     }
     
-    // Default to zh and redirect immediately
-    const newPath = `/zh${window.location.hash || '#home'}`;
-    history.replaceState({}, '', newPath);
+    // Default to Chinese
     return 'zh';
 }
 
@@ -104,20 +95,32 @@ function initializeLanguage() {
 
 // Switch language function
 function switchLanguage(lang) {
-    setLanguage(lang);
+    if (lang !== 'zh' && lang !== 'en') {
+        lang = 'zh';
+    }
+    
+    // Update URL without page reload
+    const url = new URL(window.location);
+    url.searchParams.set('lang', lang);
+    window.history.pushState({}, '', url);
+    
+    // Store in localStorage and update UI
     localStorage.setItem('language', lang);
-    
-    // Keep the hash but update the language prefix
-    const currentHash = window.location.hash || '#home';
-    const newPath = `/${lang}${currentHash}`;
-    history.pushState({}, '', newPath);
-    
-    // Update content
-    router();
+    setLanguage(lang);
 }
 
 // Set language in UI
 function setLanguage(lang) {
+    // Update language buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if ((lang === 'zh' && btn.textContent === '中文') ||
+            (lang === 'en' && btn.textContent === 'EN')) {
+            btn.classList.add('active');
+        }
+    });
+    
+    // Set HTML lang attribute
     document.documentElement.lang = lang;
     
     // Update all elements with data-i18n attribute
@@ -128,13 +131,7 @@ function setLanguage(lang) {
         element.textContent = text;
     });
     
-    // Update language buttons
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.textContent.toLowerCase().includes(lang)) {
-            btn.classList.add('active');
-        }
-    });
+    updateContent(lang);
 }
 
 // Update content based on language
