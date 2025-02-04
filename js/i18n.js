@@ -13,20 +13,21 @@ const i18n = {
         nav: {
             home: '首頁',
             about: '關於我們',
+            board: '理事會',
             projects: '專案與研究',
             education: '教育與培訓',
             join: '加入我們',
             news: '最新消息'
         },
         features: {
-            talent: '人才培育',
-            talentDesc: '建立完整的培訓系統，培養HPC和IC設計專業人才',
+            talent: '理監事名單',
+            talentDesc: '產學研各界專家共同推動台灣 HPC 發展',
             research: '開放研究',
             researchDesc: '推動BlackBear和ACALSim等開源專案',
             education: '教育培訓',
             educationDesc: '提供專業課程與實作工作坊',
-            collaboration: '產學合作',
-            collaborationDesc: '促進產業與學術交流與創新'
+            join: '加入我們',
+            joinDesc: '歡迎加入我們的行列'
         },
         footer: {
             quickLinks: '快速連結',
@@ -41,20 +42,21 @@ const i18n = {
         nav: {
             home: 'Home',
             about: 'About Us',
+            board: 'Board',
             projects: 'Projects & Research',
             education: 'Education & Training',
             join: 'Join Us',
             news: 'News'
         },
         features: {
-            talent: 'Talent Development',
-            talentDesc: 'Building comprehensive training systems for HPC and IC design professionals',
+            talent: 'Board of Directors',
+            talentDesc: 'Experts promoting Taiwan\'s HPC development',
             research: 'Open Research',
             researchDesc: 'Promoting open-source projects like BlackBear and ACALSim',
             education: 'Education',
             educationDesc: 'Providing professional courses and hands-on workshops',
-            collaboration: 'Collaboration',
-            collaborationDesc: 'Fostering industry-academia innovation and exchange'
+            join: 'Join Us',
+            joinDesc: 'Welcome to join us'
         },
         footer: {
             quickLinks: 'Quick Links',
