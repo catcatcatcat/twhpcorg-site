@@ -16,6 +16,3 @@ The Taiwan High Performance Computing Education Association (TWHPC) is a non-pro
 - Open-Source Project Development
 - Industry-Academia Collaboration
 - Workshops & Seminars
-
-[Learn more about us](/en/about)
-[View our projects](/en/projects)
