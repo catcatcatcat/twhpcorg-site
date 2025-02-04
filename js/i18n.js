@@ -19,8 +19,8 @@ const i18n = {
             news: '最新消息'
         },
         features: {
-            talent: '人才培育',
-            talentDesc: '建立完整的培訓系統，培養HPC和IC設計專業人才',
+            talent: '理監事名單',
+            talentDesc: '由產學研各界專家學者組成理監事會，共同推動台灣 HPC 與 IC 設計的發展',
             research: '開放研究',
             researchDesc: '推動BlackBear和ACALSim等開源專案',
             education: '教育培訓',
@@ -47,8 +47,8 @@ const i18n = {
             news: 'News'
         },
         features: {
-            talent: 'Talent Development',
-            talentDesc: 'Building comprehensive training systems for HPC and IC design professionals',
+            talent: 'Board of Directors',
+            talentDesc: 'Our board consists of experts from industry, academia, and research institutes, working together to advance Taiwan\'s HPC and IC design development',
             research: 'Open Research',
             researchDesc: 'Promoting open-source projects like BlackBear and ACALSim',
             education: 'Education',
