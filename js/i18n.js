@@ -21,13 +21,13 @@ const i18n = {
         },
         features: {
             talent: '理監事名單',
-            talentDesc: '由產學研各界專家學者組成理監事會，共同推動台灣 HPC 與 IC 設計的發展',
+            talentDesc: '產學研各界專家共同推動台灣 HPC 發展',
             research: '開放研究',
             researchDesc: '推動BlackBear和ACALSim等開源專案',
             education: '教育培訓',
             educationDesc: '提供專業課程與實作工作坊',
-            collaboration: '產學合作',
-            collaborationDesc: '促進產業與學術交流與創新'
+            join: '加入我們',
+            joinDesc: '歡迎加入我們的行列'
         },
         footer: {
             quickLinks: '快速連結',
@@ -50,13 +50,13 @@ const i18n = {
         },
         features: {
             talent: 'Board of Directors',
-            talentDesc: 'Our board consists of experts from industry, academia, and research institutes, working together to advance Taiwan\'s HPC and IC design development',
+            talentDesc: 'Experts promoting Taiwan\'s HPC development',
             research: 'Open Research',
             researchDesc: 'Promoting open-source projects like BlackBear and ACALSim',
             education: 'Education',
             educationDesc: 'Providing professional courses and hands-on workshops',
-            collaboration: 'Collaboration',
-            collaborationDesc: 'Fostering industry-academia innovation and exchange'
+            join: 'Join Us',
+            joinDesc: 'Welcome to join us'
         },
         footer: {
             quickLinks: 'Quick Links',
