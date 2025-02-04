@@ -45,5 +45,8 @@ If you have any questions about joining us, please contact:
 **TWHPC Secretariat Office**
 - Email: contact@twhpcedu.org
 
-[Download Membership Application Form](#)
-[Online Registration Form](#)
+## Join Now
+- [Download Membership Application Form Doc](/files/join_form.docx)
+- [Download Membership Application Form PDF](/files/join_form.pdf)
+
+Please fill in the application form and send it to us by email. We will review your application and contact you if needed.

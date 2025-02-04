@@ -43,7 +43,10 @@
 如果您對加入我們有任何疑問，歡迎聯繫：
 
 **台灣高效能運算教育協會秘書處**
-- Email: contact@twhpdedu.org
+- Email: contact@twhpcedu.org
 
-[下載入會申請表](#)
-[線上報名表單](#)
+
+## 立刻加入
+- [下載入會申請表 Word](/files/join_form.docx)
+- [下載入會申請表 PDF](/files/join_form.pdf)
+請填寫並寄送申請表至協會 email，我們會盡快處理。
