@@ -41,9 +41,9 @@ We provide comprehensive resource matching mechanisms:
 ## How to Participate
 
 If you're interested in our research projects, you can participate through:
-1. Joining open source project development
-2. Submitting research proposals
-3. Participating in technical seminars
-4. Applying for industry-academia collaboration projects
-
+- Joining open source project development
+- Submitting research proposals
+- Participating in technical seminars
+- Applying for industry-academia collaboration projects
+  
 [Contact us](/en/join) to learn more about collaboration opportunities
