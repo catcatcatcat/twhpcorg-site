@@ -13,6 +13,7 @@ const i18n = {
         nav: {
             home: '首頁',
             about: '關於我們',
+            board: '理事會',
             projects: '專案與研究',
             education: '教育與培訓',
             join: '加入我們',
@@ -41,6 +42,7 @@ const i18n = {
         nav: {
             home: 'Home',
             about: 'About Us',
+            board: 'Board',
             projects: 'Projects & Research',
             education: 'Education & Training',
             join: 'Join Us',

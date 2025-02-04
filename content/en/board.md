@@ -1,7 +1,12 @@
 # Board Members
 
+## Organization Structure
+
+TWHPC is governed by a dedicated team of professionals from academia and industry, ensuring diverse perspectives and expertise in our decision-making process.
 
 ## Board of Directors
+
+Our Board of Directors comprises leading experts in high-performance computing, IC design, and related fields:
 
 | Position | Name | Title | Organization |
 |:---------|:-----|:------|:-------------|
@@ -15,8 +20,9 @@
 | Director | Chen Kun-chih | Associate Professor | National Yang Ming Chiao Tung University |
 | Director | Chou Cheng-yi | Senior Engineer | SiFive |
 
+### Alternate Directors
 
-## Alternate Directors
+Supporting our Board of Directors are alternate members who provide additional perspectives and expertise:
 
 | Position | Name | Title | Organization |
 |:---------|:-----|:------|:-------------|
@@ -24,8 +30,9 @@
 | Alternate Director | Chen Yen-po | Student | National Cheng Kung University |
 | Alternate Director | Chiang Chia-pao | Student | National Cheng Kung University |
 
-
 ## Board of Supervisors
+
+Our supervisory board ensures proper governance and oversight:
 
 | Position | Name | Title | Organization |
 |:---------|:-----|:------|:-------------|
