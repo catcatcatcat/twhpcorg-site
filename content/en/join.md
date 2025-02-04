@@ -43,9 +43,7 @@ Suitable for organizations and research institutions:
 If you have any questions about joining us, please contact:
 
 **TWHPC Secretariat Office**
-- Phone: [TBD]
-- Email: [TBD]
-- Address: [TBD]
+- Email: contact@twhpcedu.org
 
 [Download Membership Application Form](#)
 [Online Registration Form](#)
