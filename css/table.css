@@ -18,11 +18,16 @@ th {
 
 /* Add spacing between sections */
 h2, h3 {
-    margin-top: 2em;
+    margin-top: 1.5em;
     margin-bottom: 1em;
 }
 
 /* Ensure consistent table spacing */
 table + h3 {
     margin-top: 2em;
+}
+
+/* Override margin for feature card titles */
+.feature-card h3 {
+    margin-top: 0;
 }
