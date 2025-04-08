@@ -10,7 +10,7 @@ Our Board of Directors comprises leading experts in high-performance computing, 
 
 | Position | Name | Title | Organization |
 |:---------|:-----|:------|:-------------|
-| Director | Yang Kuang-leh | Adjunct Professor | NTU Leadership Program |
+| Director | Yang Kuang-leh | Adjunct Professor | National Taiwan University of Science and Technology |
 | Director | Chen Tien-fu | Professor | National Yang Ming Chiao Tung University |
 | Director | Cheng Liang-chia (ITRI) | Division Director | ITRI |
 | Director | Lu Ming-chun (ITRI) | Deputy Director | ITRI |
@@ -19,16 +19,6 @@ Our Board of Directors comprises leading experts in high-performance computing, 
 | Director | Chang Ya-ning | Assistant Professor | National Cheng Kung University |
 | Director | Chen Kun-chih | Associate Professor | National Yang Ming Chiao Tung University |
 | Director | Chou Cheng-yi | Senior Engineer | SiFive |
-
-### Alternate Directors
-
-Supporting our Board of Directors are alternate members who provide additional perspectives and expertise:
-
-| Position | Name | Title | Organization |
-|:---------|:-----|:------|:-------------|
-| Alternate Director | Chang Jen-chien | Student | National Cheng Kung University |
-| Alternate Director | Chen Yen-po | Student | National Cheng Kung University |
-| Alternate Director | Chiang Chia-pao | Student | National Cheng Kung University |
 
 ## Board of Supervisors
 
@@ -39,4 +29,3 @@ Our supervisory board ensures proper governance and oversight:
 | Managing Supervisor | Lin Wei-fen | Adjunct Professor | National Tsing Hua University |
 | Supervisor | Hsieh Ming-te | Professor | National Cheng Kung University |
 | Supervisor | Chang Yi-hsing | Chief Engineer | Intel Asia Pacific Technology |
-| Alternate Supervisor | Wang Yu-chieh | Student | National Cheng Kung University |
