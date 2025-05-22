@@ -160,7 +160,7 @@ const Navbar: React.FC = () => {
   return (
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 shadow-md backdrop-blur-sm' : 'bg-transparent'
+        scrolled ? 'bg-white/95 shadow-md backdrop-blur-sm' : 'bg-dark-blue/30 backdrop-blur-sm'
       }`}
     >
       <div className="container-custom mx-auto">
@@ -171,7 +171,7 @@ const Navbar: React.FC = () => {
             <Link href="/" className="flex items-center mr-6" onClick={closeAllDropdowns}>
               <div className="relative h-12 w-48">
                 {/* 這裡放置 Logo，暫時使用文字替代 */}
-                <div className="font-serif font-bold text-xl">TWHPC</div>
+                <div className="font-serif font-bold text-xl text-white">TWHPC</div>
               </div>
             </Link>
 
@@ -180,8 +180,10 @@ const Navbar: React.FC = () => {
               {navItems.map((item) => (
                 <div key={item.key} className="relative group">
                   <button
-                    className={`nav-link ${
-                      router.pathname === item.href ? 'nav-link-active' : ''
+                    className={`relative px-3 py-2 transition-colors duration-200 ${
+                      scrolled ? 'text-dark-gray hover:text-primary' : 'text-white hover:text-primary/90'
+                    } ${
+                      router.pathname === item.href ? (scrolled ? 'text-primary' : 'text-primary/90') : ''
                     }`}
                     onClick={() => toggleDropdown(item.key)}
                     onMouseEnter={() => setActiveDropdown(item.key)}
@@ -237,7 +239,7 @@ const Navbar: React.FC = () => {
             {/* 加入會員 CTA 按鈕 */}
             <Link
               href="/join-us"
-              className="btn-primary"
+              className={`btn ${scrolled ? 'btn-primary' : 'bg-primary text-white hover:bg-primary/90 shadow-button'}`}
               onClick={closeAllDropdowns}
             >
               {isEnglish ? 'Join Us' : '加入會員'}
@@ -245,7 +247,7 @@ const Navbar: React.FC = () => {
 
             {/* 語言切換 */}
             <button
-              className="ml-4 flex items-center text-sm font-medium hover:text-primary transition-colors duration-200"
+              className={`ml-4 flex items-center text-sm font-medium transition-colors duration-200 ${scrolled ? 'text-dark-gray hover:text-primary' : 'text-white hover:text-primary/90'}`}
               onClick={toggleLanguage}
             >
               {isEnglish ? '中文' : 'EN'}

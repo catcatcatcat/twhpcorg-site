@@ -92,43 +92,79 @@ export default function Home() {
     <Layout>
       {/* Hero Banner */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* 背景圖片 - 暫時使用漸層背景 */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary/30 to-tertiary/20 z-0"></div>
+        {/* Hero Background Image with Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-dark-blue/80 to-dark-blue/50 z-10"></div>
+        <div className="absolute inset-0 z-0 bg-cover bg-center" 
+          style={{
+            backgroundImage: "url('/assets/images/hero-computing.jpg')",
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+          }}>
+        </div>
         
-        <div className="container-custom relative z-10">
+        {/* Decorative Elements */}
+        <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-dark-blue/30 to-transparent z-10"></div>
+        <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-dark-blue/30 to-transparent z-10"></div>
+        
+        {/* Content Container */}
+        <div className="container-custom relative z-20">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              {/* Decorative Element - Line */}
+              <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
+              
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
                 {isEnglish 
                   ? 'Taiwan High Performance Computing Education Association' 
                   : '台灣高效能運算教育協會'}
               </h1>
               
-              <p className="text-xl md:text-2xl mb-8 text-dark-gray/90">
+              <p className="text-xl md:text-2xl mb-10 text-white/90">
                 {isEnglish 
                   ? 'Bridging academia and industry through HPC and IC design education' 
                   : '透過高效能運算與 IC 設計教育連結學界與產業'}
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/join-us" className="btn-primary">
+              <div className="flex flex-col sm:flex-row gap-5 justify-center">
+                <Link href="/join-us" className="btn-primary px-8 py-3 text-lg">
                   {isEnglish ? 'Join Us' : '加入會員'}
                 </Link>
-                <Link href="/about/mission" className="btn-outline">
+                <Link href="/about/mission" className="btn-outline border-white text-white hover:bg-white/20 hover:border-white px-8 py-3 text-lg">
                   {isEnglish ? 'Learn More' : '了解更多'}
                 </Link>
               </div>
             </motion.div>
           </div>
         </div>
+        
+        {/* Scroll Indicator */}
+        <motion.div 
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 cursor-pointer"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.5, duration: 0.5 }}
+          whileHover={{ scale: 1.1 }}
+          onClick={() => {
+            const missionSection = document.getElementById('mission-section');
+            if (missionSection) missionSection.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
+          <div className="flex flex-col items-center text-white/80">
+            <span className="text-sm mb-2">{isEnglish ? 'Scroll Down' : '向下滾動'}</span>
+            <svg className="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+          </div>
+        </motion.div>
       </section>
 
       {/* 協會簡介 */}
-      <section className="py-16 bg-white">
+      <section id="mission-section" className="py-16 bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
             <h2 className="text-3xl font-bold mb-8 text-dark-blue">
