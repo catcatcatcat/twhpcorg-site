@@ -165,73 +165,79 @@ const Navbar: React.FC = () => {
     >
       <div className="container-custom mx-auto">
         <nav className="flex items-center justify-between py-4">
-          {/* Logo */}
-          <Link href="/" className="flex items-center" onClick={closeAllDropdowns}>
-            <div className="relative h-12 w-48">
-              {/* 這裡放置 Logo，暫時使用文字替代 */}
-              <div className="font-serif font-bold text-xl">TWHPC</div>
-            </div>
-          </Link>
+          {/* Logo and Navigation Links */}
+          <div className="flex items-center">
+            {/* Logo */}
+            <Link href="/" className="flex items-center mr-6" onClick={closeAllDropdowns}>
+              <div className="relative h-12 w-48">
+                {/* 這裡放置 Logo，暫時使用文字替代 */}
+                <div className="font-serif font-bold text-xl">TWHPC</div>
+              </div>
+            </Link>
 
-          {/* 桌面版導航 */}
-          <div className="hidden lg:flex items-center space-x-1">
-            {navItems.map((item) => (
-              <div key={item.key} className="relative group">
-                <button
-                  className={`nav-link ${
-                    router.pathname === item.href ? 'nav-link-active' : ''
-                  }`}
-                  onClick={() => toggleDropdown(item.key)}
-                  onMouseEnter={() => setActiveDropdown(item.key)}
-                  onMouseLeave={() => setActiveDropdown(null)}
-                >
-                  {isEnglish ? item.label.en : item.label.zh}
-                  {item.dropdown && (
-                    <svg 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      className="h-4 w-4 ml-1 inline-block transition-transform duration-200 ease-in-out"
-                      fill="none" 
-                      viewBox="0 0 24 24" 
-                      stroke="currentColor"
-                      style={{ 
-                        transform: activeDropdown === item.key ? 'rotate(180deg)' : 'rotate(0)' 
-                      }}
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  )}
-                </button>
-
-                {/* 下拉選單 */}
-                {item.dropdown && (
-                  <div
-                    className={`absolute left-0 mt-0 w-60 bg-white shadow-lg rounded-md overflow-hidden transition-all duration-200 origin-top-left ${
-                      activeDropdown === item.key ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
+            {/* 桌面版導航 - Now part of the left group */}
+            <div className="hidden lg:flex items-center space-x-1">
+              {navItems.map((item) => (
+                <div key={item.key} className="relative group">
+                  <button
+                    className={`nav-link ${
+                      router.pathname === item.href ? 'nav-link-active' : ''
                     }`}
+                    onClick={() => toggleDropdown(item.key)}
                     onMouseEnter={() => setActiveDropdown(item.key)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
-                    <div className="py-2">
-                      {item.dropdown.map((dropdownItem) => (
-                        <Link
-                          key={dropdownItem.key}
-                          href={dropdownItem.href}
-                          className="block px-4 py-2 text-sm hover:bg-secondary/20 transition-colors duration-150"
-                          onClick={closeAllDropdowns}
-                        >
-                          {isEnglish ? dropdownItem.label.en : dropdownItem.label.zh}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            ))}
+                    {isEnglish ? item.label.en : item.label.zh}
+                    {item.dropdown && (
+                      <svg 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        className="h-4 w-4 ml-1 inline-block transition-transform duration-200 ease-in-out"
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor"
+                        style={{ 
+                          transform: activeDropdown === item.key ? 'rotate(180deg)' : 'rotate(0)' 
+                        }}
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    )}
+                  </button>
 
+                  {/* 下拉選單 */}
+                  {item.dropdown && (
+                    <div
+                      className={`absolute left-0 mt-0 w-60 bg-white shadow-lg rounded-md overflow-hidden transition-all duration-200 origin-top-left ${
+                        activeDropdown === item.key ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
+                      }`}
+                      onMouseEnter={() => setActiveDropdown(item.key)}
+                      onMouseLeave={() => setActiveDropdown(null)}
+                    >
+                      <div className="py-2">
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.key}
+                            href={dropdownItem.href}
+                            className="block px-4 py-2 text-sm hover:bg-secondary/20 transition-colors duration-150"
+                            onClick={closeAllDropdowns}
+                          >
+                            {isEnglish ? dropdownItem.label.en : dropdownItem.label.zh}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right-aligned items: Join Us button and Language Toggle */}
+          <div className="hidden lg:flex items-center">
             {/* 加入會員 CTA 按鈕 */}
             <Link
               href="/join-us"
-              className="btn-primary ml-4"
+              className="btn-primary"
               onClick={closeAllDropdowns}
             >
               {isEnglish ? 'Join Us' : '加入會員'}
@@ -307,7 +313,9 @@ const Navbar: React.FC = () => {
             </button>
           </div>
 
-          <div className="space-y-4">
+          {/* Mobile Navigation Menu - Main navigation items */}
+          <div className="space-y-4 mb-8">
+            <h3 className="text-sm uppercase text-gray-500 font-medium mb-2">{isEnglish ? 'Navigation' : '導航選單'}</h3>
             {navItems.map((item) => (
               <div key={item.key} className="border-b border-gray-100 pb-4">
                 <div
@@ -367,8 +375,12 @@ const Navbar: React.FC = () => {
                 )}
               </div>
             ))}
+          </div>
 
-            <div className="pt-4">
+          {/* Mobile Actions Section - Join Us and Language Toggle */}
+          <div className="border-t border-gray-100 pt-6">
+            <h3 className="text-sm uppercase text-gray-500 font-medium mb-4">{isEnglish ? 'Actions' : '操作'}</h3>
+            <div className="space-y-4">
               <Link
                 href="/join-us"
                 className="btn-primary w-full justify-center"
@@ -376,11 +388,9 @@ const Navbar: React.FC = () => {
               >
                 {isEnglish ? 'Join Us' : '加入會員'}
               </Link>
-            </div>
 
-            <div className="pt-4 flex justify-center">
               <button
-                className="flex items-center text-base font-medium hover:text-primary transition-colors duration-200"
+                className="flex items-center justify-center w-full text-base font-medium hover:text-primary transition-colors duration-200 py-2 border border-gray-200 rounded-md"
                 onClick={() => {
                   toggleLanguage();
                   setIsOpen(false);
