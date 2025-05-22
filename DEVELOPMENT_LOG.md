@@ -153,3 +153,61 @@
 - 優化響應式設計和動畫效果
 - 測試多語言功能
 - 準備部署到 GitHub Pages
+
+## 2025-05-22: UI 改進與問題修復
+
+### 今日完成的工作
+
+1. **修復開發伺服器連線問題**
+   - 解決了開發伺服器無法連線的問題
+   - Commit: `3e48431 - fix: resolve development server connection issues`
+
+2. **導航欄重構**
+   - 重新組織導航欄佈局，採用左對齊的選單項目
+   - 改善了導航欄在不同螢幕尺寸下的顯示效果
+   - Commit: `49d8c80 - refactor(navbar): reorganize layout with left-aligned menu items`
+
+3. **首頁設計增強**
+   - 添加全屏 Hero 圖片，提升視覺衝擊力
+   - 改善導航欄的可見度
+   - 優化了首頁各區塊的排版和間距
+   - Commit: `10be1d8 - Enhance homepage design: Add fullscreen hero image and improve navbar visibility`
+
+4. **UI 細節優化**
+   - 修復了滾動指示器文字（"向下滾動"/"Scroll Down"）沒有正確置中的問題
+   - 採用更可靠的 Flexbox 方法替代 transform/translate 方式進行居中
+   - Commit: `ccb6f00 - fix: Center the scroll indicator text`
+
+### 遇到的問題與解決方案
+
+1. **滾動指示器文字置中問題**
+   - **問題**：使用 `left-1/2 transform -translate-x-1/2` 方法無法準確地將文字置中
+   - **解決方案**：
+     - 重構了滾動指示器的 HTML 結構
+     - 使用 `left-0 right-0 w-full flex justify-center items-center` 實現更可靠的居中效果
+     - 為內部容器添加 `text-center` 類確保文字居中
+
+2. **開發伺服器端口佔用問題**
+   - **問題**：多次啟動開發伺服器後，端口 3000 和 3001 被佔用，導致新的伺服器必須使用其他端口
+   - **解決方案**：
+     - 使用 `lsof -i :3000,3001 | grep LISTEN` 查找佔用端口的進程
+     - 使用 `kill -9 <進程ID>` 終止這些進程
+     - 建議在啟動新的開發伺服器前，先確認並終止舊的伺服器進程
+
+### 下一步計劃
+
+1. **完善多語言支援**
+   - 添加更多翻譯內容
+   - 測試語言切換功能
+
+2. **優化響應式設計**
+   - 確保網站在所有裝置上都有良好的顯示效果
+   - 特別關注手機版的導航體驗
+
+3. **添加更多頁面內容**
+   - 開始開發「關於我們」、「專案與研究」等頁面
+   - 豐富首頁的內容
+
+4. **改進動畫效果**
+   - 添加更多滾動動畫
+   - 優化頁面轉場效果

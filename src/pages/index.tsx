@@ -134,7 +134,7 @@ export default function Home() {
                 <Link href="/join-us" className="btn-primary px-8 py-3 text-lg">
                   {isEnglish ? 'Join Us' : '加入會員'}
                 </Link>
-                <Link href="/about/mission" className="btn-outline border-white text-white hover:bg-white/20 hover:border-white px-8 py-3 text-lg">
+                <Link href="/about#mission" className="btn-outline border-white text-white hover:bg-white/20 hover:border-white px-8 py-3 text-lg">
                   {isEnglish ? 'Learn More' : '了解更多'}
                 </Link>
               </div>

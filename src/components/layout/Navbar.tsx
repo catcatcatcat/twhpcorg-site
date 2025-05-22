@@ -72,27 +72,27 @@ const Navbar: React.FC = () => {
         {
           key: 'mission',
           label: { zh: '使命', en: 'Mission' },
-          href: '/about/mission',
+          href: '/about#mission',
         },
         {
           key: 'board',
           label: { zh: '理監事成員', en: 'Board' },
-          href: '/about/board',
+          href: '/about#board',
         },
         {
           key: 'history',
           label: { zh: '歷史', en: 'History' },
-          href: '/about/history',
+          href: '/about#history',
         },
         {
           key: 'annual-report',
           label: { zh: '年度報告', en: 'Annual Report' },
-          href: '/about/annual-report',
+          href: '/about#annual-report',
         },
         {
           key: 'partners',
           label: { zh: '合作夥伴', en: 'Partners' },
-          href: '/about/partners',
+          href: '/about#partners',
         },
       ],
     },
