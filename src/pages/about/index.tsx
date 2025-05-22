@@ -139,86 +139,92 @@ export default function About() {
         </div>
       </section>
 
-      {/* 導航目錄 - 在桌面版顯示為側邊欄，在移動版顯示為頂部選單 */}
-      <div className="sticky top-20 bg-white z-30 border-b border-gray-100 shadow-sm">
-        <div className="container-custom py-4">
-          <div className="flex overflow-x-auto hide-scrollbar space-x-6 justify-start md:justify-center">
-            {sections.map((section) => (
-              <a
-                key={section.id}
-                href={`#${section.id}`}
-                className={`whitespace-nowrap px-3 py-2 text-sm font-medium transition-colors duration-200 ${activeSection === section.id ? 'text-primary border-b-2 border-primary' : 'text-gray-600 hover:text-primary'}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  const element = document.getElementById(section.id);
-                  if (element) {
-                    const navbarHeight = 120; // 導航欄+目錄高度
-                    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-                    window.scrollTo({
-                      top: elementPosition - navbarHeight,
-                      behavior: 'smooth'
-                    });
-                    // 更新URL但不重新加載頁面
-                    window.history.pushState(null, '', `#${section.id}`);
-                    setActiveSection(section.id);
-                  }
-                }}
-              >
-                {isEnglish ? section.title.en : section.title.zh}
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* 主要內容區 */}
       <section className="py-16 bg-white">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            {/* 簡介 */}
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold mb-4 text-dark-blue">
-                {isEnglish ? 'Taiwan High Performance Computing Education Association' : '台灣高效能運算教育協會'}
-              </h2>
-              <p className="text-lg text-gray-600">
-                {isEnglish 
-                  ? 'Dedicated to advancing HPC and IC design education in Taiwan' 
-                  : '致力於推進台灣高效能運算和 IC 設計教育'}
-              </p>
-            </div>
-            
-            {/* 各個段落內容 */}
-            {sections.map((section, index) => (
-              <div 
-                key={section.id} 
-                id={section.id} 
-                className={`scroll-mt-32 mb-20 ${index !== 0 ? 'pt-8 border-t border-gray-100' : ''}`}
-              >
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 0.5 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                >
-                  <h2 className="text-3xl font-bold mb-6 text-dark-blue">
-                    {isEnglish ? section.title.en : section.title.zh}
-                  </h2>
-                  <h3 className="text-xl font-medium mb-4 text-primary">
-                    {isEnglish ? section.subtitle.en : section.subtitle.zh}
-                  </h3>
-                  <p className="text-lg text-gray-600 mb-8">
-                    {isEnglish ? section.description.en : section.description.zh}
-                  </p>
-                  
-                  {/* 內容將在這裡填充 */}
-                  <div className="bg-gray-50 p-8 rounded-lg border border-gray-100">
-                    <p className="text-center text-gray-500 italic">
-                      {isEnglish ? 'Content coming soon...' : '內容即將推出...'}
-                    </p>
-                  </div>
-                </motion.div>
+          <div className="flex flex-col md:flex-row gap-8">
+            {/* 左側導航目錄 */}
+            <div className="md:w-64 flex-shrink-0">
+              <div className="sticky top-24 bg-white rounded-lg border border-gray-100 shadow-sm p-4">
+                <h3 className="text-lg font-medium mb-4 text-dark-blue border-b pb-2">
+                  {isEnglish ? 'Navigation' : '導覽'}
+                </h3>
+                <div className="flex flex-col space-y-2">
+                  {sections.map((section) => (
+                    <a
+                      key={section.id}
+                      href={`#${section.id}`}
+                      className={`px-3 py-2 text-sm font-medium rounded transition-colors duration-200 ${activeSection === section.id ? 'bg-primary/10 text-primary' : 'text-gray-600 hover:bg-gray-50 hover:text-primary'}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const element = document.getElementById(section.id);
+                        if (element) {
+                          const navbarHeight = 100; // 導航欄高度
+                          const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+                          window.scrollTo({
+                            top: elementPosition - navbarHeight,
+                            behavior: 'smooth'
+                          });
+                          // 更新URL但不重新加載頁面
+                          window.history.pushState(null, '', `#${section.id}`);
+                          setActiveSection(section.id);
+                        }
+                      }}
+                    >
+                      {isEnglish ? section.title.en : section.title.zh}
+                    </a>
+                  ))}
+                </div>
               </div>
-            ))}
+            </div>
+
+            {/* 右側主要內容 */}
+            <div className="flex-1 max-w-3xl">
+              {/* 簡介 */}
+              <div className="text-center mb-16">
+                <h2 className="text-3xl font-bold mb-4 text-dark-blue">
+                  {isEnglish ? 'Taiwan High Performance Computing Education Association' : '台灣高效能運算教育協會'}
+                </h2>
+                <p className="text-lg text-gray-600">
+                  {isEnglish 
+                    ? 'Dedicated to advancing HPC and IC design education in Taiwan' 
+                    : '致力於推進台灣高效能運算和 IC 設計教育'}
+                </p>
+              </div>
+              
+              {/* 各個段落內容 */}
+              {sections.map((section, index) => (
+                <div 
+                  key={section.id} 
+                  id={section.id} 
+                  className={`scroll-mt-32 mb-20 ${index !== 0 ? 'pt-8 border-t border-gray-100' : ''}`}
+                >
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                  >
+                    <h2 className="text-3xl font-bold mb-6 text-dark-blue">
+                      {isEnglish ? section.title.en : section.title.zh}
+                    </h2>
+                    <h3 className="text-xl font-medium mb-4 text-primary">
+                      {isEnglish ? section.subtitle.en : section.subtitle.zh}
+                    </h3>
+                    <p className="text-lg text-gray-600 mb-8">
+                      {isEnglish ? section.description.en : section.description.zh}
+                    </p>
+                    
+                    {/* 內容將在這裡填充 */}
+                    <div className="bg-gray-50 p-8 rounded-lg border border-gray-100">
+                      <p className="text-center text-gray-500 italic">
+                        {isEnglish ? 'Content coming soon...' : '內容即將推出...'}
+                      </p>
+                    </div>
+                  </motion.div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
