@@ -143,24 +143,26 @@ export default function Home() {
         </div>
         
         {/* Scroll Indicator */}
-        <motion.div 
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 cursor-pointer"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.5, duration: 0.5 }}
-          whileHover={{ scale: 1.1 }}
-          onClick={() => {
-            const missionSection = document.getElementById('mission-section');
-            if (missionSection) missionSection.scrollIntoView({ behavior: 'smooth' });
-          }}
-        >
-          <div className="flex flex-col items-center text-white/80">
-            <span className="text-sm mb-2">{isEnglish ? 'Scroll Down' : '向下滾動'}</span>
-            <svg className="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
-          </div>
-        </motion.div>
+        <div className="absolute bottom-8 left-0 right-0 z-20 flex justify-center items-center w-full">
+          <motion.div 
+            className="cursor-pointer text-center"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.5, duration: 0.5 }}
+            whileHover={{ scale: 1.1 }}
+            onClick={() => {
+              const missionSection = document.getElementById('mission-section');
+              if (missionSection) missionSection.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
+            <div className="flex flex-col items-center text-white/80">
+              <span className="text-sm mb-2">{isEnglish ? 'Scroll Down' : '向下滾動'}</span>
+              <svg className="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+              </svg>
+            </div>
+          </motion.div>
+        </div>
       </section>
 
       {/* 協會簡介 */}
