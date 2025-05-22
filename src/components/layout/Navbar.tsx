@@ -185,7 +185,25 @@ const Navbar: React.FC = () => {
                     } ${
                       router.pathname === item.href ? (scrolled ? 'text-primary' : 'text-primary/90') : ''
                     }`}
-                    onClick={() => toggleDropdown(item.key)}
+                    onClick={() => {
+                      if (item.key === 'home') {
+                        // Home should always navigate to the homepage
+                        router.push('/');
+                      } else if (item.dropdown && item.dropdown.length > 0) {
+                        // For items with dropdown, first check if they have their own page
+                        // If the href is not just a fragment (like "#mission"), navigate to the item's own page
+                        // Otherwise navigate to the first dropdown item
+                        if (item.href && !item.href.includes('#') && !item.href.endsWith('/')) {
+                          router.push(item.href);
+                        } else {
+                          router.push(item.dropdown[0].href);
+                        }
+                      } else {
+                        // If no dropdown, navigate to the item's href
+                        router.push(item.href);
+                      }
+                      closeAllDropdowns();
+                    }}
                     onMouseEnter={() => setActiveDropdown(item.key)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
@@ -325,14 +343,21 @@ const Navbar: React.FC = () => {
                   onClick={() => toggleDropdown(item.key)}
                 >
                   <Link
-                    href={item.href}
+                    href={item.key === 'home' 
+                      ? '/' 
+                      : (item.dropdown && item.dropdown.length > 0 
+                        ? (item.href && !item.href.includes('#') && !item.href.endsWith('/') 
+                          ? item.href 
+                          : item.dropdown[0].href) 
+                        : item.href)}
                     className="text-lg font-medium"
                     onClick={(e) => {
                       if (item.dropdown) {
-                        e.preventDefault();
-                      } else {
-                        setIsOpen(false);
+                        // Don't prevent default anymore - we want to navigate
+                        // Just toggle the dropdown for visual feedback
+                        toggleDropdown(item.key);
                       }
+                      setIsOpen(false);
                     }}
                   >
                     {isEnglish ? item.label.en : item.label.zh}
