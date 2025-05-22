@@ -1,0 +1,44 @@
+{
+  "title": "Taiwan High Performance Computing Education Association",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "news": "News",
+    "resources": "Resources",
+    "contact": "Contact",
+    "membership": "Membership"
+  },
+  "hero": {
+    "title": "Taiwan High Performance Computing Education Association",
+    "subtitle": "Advancing Education and Research in High Performance Computing",
+    "cta": "Learn More"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "The Taiwan High Performance Computing Education Association is dedicated to promoting HPC technologies and enhancing Taiwan's competitiveness in this field. We provide educational resources, organize seminars, and facilitate industry-academia collaboration."
+  },
+  "projects": {
+    "title": "Key Projects",
+    "viewAll": "View All"
+  },
+  "news": {
+    "title": "Latest News",
+    "viewAll": "View All"
+  },
+  "partners": {
+    "title": "Our Partners"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions"
+  },
+  "footer": {
+    "about": "About Us",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "support": "Support Us",
+    "copyright": "© 2025 Taiwan High Performance Computing Education Association. All Rights Reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
+  }
+}

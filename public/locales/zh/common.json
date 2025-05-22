@@ -1,0 +1,44 @@
+{
+  "title": "台灣高效能運算教育協會",
+  "nav": {
+    "home": "首頁",
+    "about": "關於協會",
+    "projects": "重點專案",
+    "news": "最新消息",
+    "resources": "資源中心",
+    "contact": "聯絡我們",
+    "membership": "會員專區"
+  },
+  "hero": {
+    "title": "台灣高效能運算教育協會",
+    "subtitle": "推動高效能運算教育與研究的專業組織",
+    "cta": "了解更多"
+  },
+  "about": {
+    "title": "關於協會",
+    "description": "台灣高效能運算教育協會致力於推廣高效能運算技術，提升台灣在此領域的競爭力。我們提供教育資源、舉辦研討會，並促進產學合作。"
+  },
+  "projects": {
+    "title": "重點專案",
+    "viewAll": "查看全部"
+  },
+  "news": {
+    "title": "最新消息",
+    "viewAll": "查看全部"
+  },
+  "partners": {
+    "title": "合作夥伴"
+  },
+  "faq": {
+    "title": "常見問題"
+  },
+  "footer": {
+    "about": "關於協會",
+    "quickLinks": "快速連結",
+    "contact": "聯絡方式",
+    "support": "支持我們",
+    "copyright": "© 2025 台灣高效能運算教育協會. 版權所有.",
+    "privacy": "隱私權政策",
+    "terms": "使用條款"
+  }
+}

@@ -8,11 +8,11 @@ const nextConfig = {
     domains: ['localhost'],
     unoptimized: process.env.NODE_ENV === 'development' ? false : true,
   },
-  // 為了支援 GitHub Pages 的靜態輸出
-  output: 'export',
-  // 禁用 Next.js 的圖像優化功能，因為 GitHub Pages 不支援
-  // 在生產環境中，我們將使用靜態圖像
-  trailingSlash: true,
+  // 只在生產環境啟用靜態輸出，開發環境使用正常的開發伺服器
+  ...(process.env.NODE_ENV === 'production' ? {
+    output: 'export',
+    trailingSlash: true,
+  } : {}),
 }
 
 module.exports = nextConfig
