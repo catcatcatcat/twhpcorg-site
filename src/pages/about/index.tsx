@@ -19,9 +19,9 @@ export default function About() {
       id: 'mission',
       title: { en: 'Mission', zh: '使命' },
       subtitle: { en: 'Our Vision and Goals', zh: '我們的願景與目標' },
-      description: { 
-        en: 'Cultivating talents with theoretical and practical capabilities in HPC and IC design', 
-        zh: '培育具備理論與實務能力的 HPC 與 IC 設計人才' 
+      description: {
+        en: `Taiwan High Performance Computing Education Association (TWHPCEdu) is a non-profit platform dedicated to promoting innovation in technology education and talent cultivation. By bringing together expertise from academia, industry, and the open-source community, we strive to build a learning ecosystem that bridges the gap between theory and practice, emphasizing hands-on experience and innovative thinking.\n\nOur vision: To enable more people to learn, practice, and participate in key future technology fields, becoming the driving force for Taiwan's technological advancement.\n\nWe believe education is the foundation of technological innovation, and hands-on practice is the bridge between learning and industry.\n\nIn this rapidly evolving era, our goal is not just to offer a course, but to foster the ability and culture of continuous learning, practice, and growth.`,
+        zh: `台灣高效能運算教育協會（TWHPCEdu, Taiwan High Performance Computing Education Association） 是一個致力於推動科技教育創新與人才培育的非營利平台。匯集來自學界、產業與開源社群的專業力量，致力於打造一個打破學用落差、強調實作與創新思維的學習生態系。\n\n我們的願景：讓更多人能夠在未來關鍵技術領域中，有機會學習、實作、參與，進而成為推動台灣科技進步的核心力量。\n\n我們相信教育是科技創新的根本，實作是連結學習與產業的橋樑。\n\n在這個快速演化的時代，我們希望打造的不僅是一門課，而是一種能夠持續學習、持續實踐、持續成長的能力與文化。`
       }
     },
     {
@@ -215,12 +215,61 @@ export default function About() {
                       {isEnglish ? section.description.en : section.description.zh}
                     </p>
                     
-                    {/* 內容將在這裡填充 */}
-                    <div className="bg-gray-50 p-8 rounded-lg border border-gray-100">
-                      <p className="text-center text-gray-500 italic">
-                        {isEnglish ? 'Content coming soon...' : '內容即將推出...'}
-                      </p>
-                    </div>
+                    {/* 只在 board 區塊顯示理監事名單表格，其他區塊顯示原本內容 */}
+                    {section.id === 'board' ? (
+                      <div className="bg-gray-50 p-8 rounded-lg border border-gray-100">
+                        {/* 理事會 */}
+                        <h3 className="text-2xl font-semibold mb-4 text-primary">{isEnglish ? 'Board of Directors' : '理事會'}</h3>
+                        <div className="overflow-x-auto mb-8">
+                          <table className="min-w-full border text-left">
+                            <thead>
+                              <tr className="bg-primary text-white">
+                                <th className="px-4 py-2">{isEnglish ? 'Title' : '職稱'}</th>
+                                <th className="px-4 py-2">{isEnglish ? 'Name' : '姓名'}</th>
+                                <th className="px-4 py-2">{isEnglish ? 'Position' : '職稱'}</th>
+                                <th className="px-4 py-2">{isEnglish ? 'Organization' : '單位'}</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr><td>理事</td><td>楊光磊</td><td>產學創新學院執行長</td><td>臺灣科技大學</td></tr>
+                              <tr><td>理事</td><td>陳添福</td><td>教授</td><td>國立陽明交通大學</td></tr>
+                              <tr><td>理事</td><td>鄭良加(工研院)</td><td>組長</td><td>工研院</td></tr>
+                              <tr><td>理事</td><td>盧銘俊(工研院)</td><td>副所長</td><td>工研院</td></tr>
+                              <tr><td>理事</td><td>郭致宏</td><td>副教授</td><td>國立成功大學</td></tr>
+                              <tr><td>理事</td><td>許志仲</td><td>副教授</td><td>國立成功大學</td></tr>
+                              <tr><td>理事</td><td>張亞寧</td><td>助理教授</td><td>國立成功大學</td></tr>
+                              <tr><td>理事</td><td>陳坤志</td><td>副教授</td><td>國立陽明交通大學</td></tr>
+                              <tr><td>理事</td><td>周政毅</td><td>資深工程師</td><td>個人開源貢獻者</td></tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        {/* 監事會 */}
+                        <h3 className="text-2xl font-semibold mb-4 text-primary">{isEnglish ? 'Board of Supervisors' : '監事會'}</h3>
+                        <div className="overflow-x-auto">
+                          <table className="min-w-full border text-left">
+                            <thead>
+                              <tr className="bg-primary text-white">
+                                <th className="px-4 py-2">{isEnglish ? 'Title' : '職稱'}</th>
+                                <th className="px-4 py-2">{isEnglish ? 'Name' : '姓名'}</th>
+                                <th className="px-4 py-2">{isEnglish ? 'Position' : '職稱'}</th>
+                                <th className="px-4 py-2">{isEnglish ? 'Organization' : '單位'}</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr><td>常務監事</td><td>林偉棻</td><td>兼任教授</td><td>國立清華大學</td></tr>
+                              <tr><td>監事</td><td>謝明得</td><td>教授</td><td>國立成功大學</td></tr>
+                              <tr><td>監事</td><td>張益興</td><td>兼任教授</td><td>臺灣大學重點科技研究學院</td></tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="bg-gray-50 p-8 rounded-lg border border-gray-100">
+                        <p className="text-center text-gray-500 italic">
+                          {isEnglish ? 'Content coming soon...' : '內容即將推出...'}
+                        </p>
+                      </div>
+                    )}
                   </motion.div>
                 </div>
               ))}

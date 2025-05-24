@@ -171,7 +171,7 @@ const Navbar: React.FC = () => {
             <Link href="/" className="flex items-center mr-6" onClick={closeAllDropdowns}>
               <div className="relative h-12 w-48">
                 {/* 這裡放置 Logo，暫時使用文字替代 */}
-                <div className="font-serif font-bold text-xl text-white">TWHPC</div>
+                <div className="font-serif font-bold text-xl text-white">TWHPCEdu</div>
               </div>
             </Link>
 
@@ -313,7 +313,7 @@ const Navbar: React.FC = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex justify-between items-center mb-8">
             <Link href="/" className="font-serif font-bold text-xl" onClick={() => setIsOpen(false)}>
-              TWHPC
+              TWHPCEdu
             </Link>
             <button onClick={() => setIsOpen(false)}>
               <svg

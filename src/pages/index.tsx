@@ -16,19 +16,19 @@ export default function Home() {
   // FAQ 資料
   const faqs = [
     {
-      question: isEnglish ? 'Who can join TWHPC?' : '誰可以加入高效能運算協會？',
+      question: isEnglish ? 'Who can join TWHPCEdu?' : '誰可以加入高效能運算協會？',
       answer: isEnglish 
-        ? 'Academics, industry professionals, students, and anyone interested in high-performance computing and IC design education can join TWHPC.' 
+        ? 'Academics, industry professionals, students, and anyone interested in high-performance computing and IC design education can join TWHPCEdu.' 
         : '學界、產業界專業人士、學生，以及任何對高效能運算和 IC 設計教育有興趣的人士都可以加入高效能運算協會。'
     },
     {
-      question: isEnglish ? 'How can I participate in TWHPC projects?' : '如何參與高效能運算協會的專案？',
+      question: isEnglish ? 'How can I participate in TWHPCEdu projects?' : '如何參與高效能運算協會的專案？',
       answer: isEnglish 
         ? 'You can participate by becoming a member, attending our training programs, or contributing to our open-source projects like BlackBear.' 
         : '您可以透過成為會員、參加我們的培訓課程，或是參與我們的開源專案如 BlackBear 來參與協會活動。'
     },
     {
-      question: isEnglish ? 'How can I contact TWHPC?' : '如何聯絡高效能運算協會？',
+      question: isEnglish ? 'How can I contact TWHPCEdu?' : '如何聯絡高效能運算協會？',
       answer: isEnglish 
         ? 'You can reach us via email at contact@twhpc.org or through our social media channels.' 
         : '您可以透過 contact@twhpc.org 或我們的社群媒體管道與我們聯繫。'
@@ -61,7 +61,7 @@ export default function Home() {
   const news = [
     {
       id: 1,
-      title: isEnglish ? 'TWHPC Annual Conference 2025' : '2025 年高效能運算協會年度會議',
+      title: isEnglish ? 'TWHPCEdu Annual Conference 2025' : '2025 年高效能運算協會年度會議',
       date: '2025-06-15',
       excerpt: isEnglish 
         ? 'Join us for the annual conference featuring keynote speakers from academia and industry.' 
@@ -82,7 +82,7 @@ export default function Home() {
       title: isEnglish ? 'Industry Partnership Program' : '產業合作夥伴計畫',
       date: '2025-04-10',
       excerpt: isEnglish 
-        ? 'TWHPC launches a new program to strengthen collaboration with industry partners.' 
+        ? 'TWHPCEdu launches a new program to strengthen collaboration with industry partners.' 
         : '高效能運算協會推出新計畫，加強與產業合作夥伴的合作。',
       link: '/news/industry-partnership'
     }
@@ -174,8 +174,8 @@ export default function Home() {
             </h2>
             <p className="text-xl leading-relaxed">
               {isEnglish 
-                ? 'TWHPC is dedicated to cultivating talents with theoretical and practical capabilities in HPC and IC design, connecting academic and industry needs.' 
-                : 'TWHPC 致力於培育具備理論與實務能力的 HPC 與 IC 設計人才，連結學界與產業需求。'}
+                ? 'TWHPCEdu is dedicated to cultivating talents with theoretical and practical capabilities in HPC and IC design, connecting academic and industry needs.' 
+                : 'TWHPCEdu 致力於培育具備理論與實務能力的 HPC 與 IC 設計人才，連結學界與產業需求。'}
             </p>
           </div>
         </div>
@@ -307,7 +307,7 @@ export default function Home() {
             </h2>
             <p className="text-lg max-w-2xl mx-auto">
               {isEnglish 
-                ? 'Find answers to common questions about TWHPC' 
+                ? 'Find answers to common questions about TWHPCEdu' 
                 : '尋找關於高效能運算協會的常見問題解答'}
             </p>
           </div>

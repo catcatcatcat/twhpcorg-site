@@ -63,11 +63,52 @@ export default function Board() {
               </p>
             </div>
             
-            {/* 內容將在這裡填充 */}
+            {/* 理監事名單表格 */}
             <div className="bg-gray-50 p-8 rounded-lg border border-gray-100">
-              <p className="text-center text-gray-500 italic">
-                {isEnglish ? 'Content coming soon...' : '內容即將推出...'}
-              </p>
+              {/* 理事會 */}
+              <h3 className="text-2xl font-semibold mb-4 text-primary">{isEnglish ? 'Board of Directors' : '理事會'}</h3>
+              <div className="overflow-x-auto mb-8">
+                <table className="min-w-full border text-left">
+                  <thead>
+                    <tr className="bg-primary text-white">
+                      <th className="px-4 py-2">{isEnglish ? 'Title' : '職稱'}</th>
+                      <th className="px-4 py-2">{isEnglish ? 'Name' : '姓名'}</th>
+                      <th className="px-4 py-2">{isEnglish ? 'Position' : '職稱'}</th>
+                      <th className="px-4 py-2">{isEnglish ? 'Organization' : '單位'}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>理事</td><td>楊光磊</td><td>產學創新學院執行長</td><td>臺灣科技大學</td></tr>
+                    <tr><td>理事</td><td>陳添福</td><td>教授</td><td>國立陽明交通大學</td></tr>
+                    <tr><td>理事</td><td>鄭良加(工研院)</td><td>組長</td><td>工研院</td></tr>
+                    <tr><td>理事</td><td>盧銘俊(工研院)</td><td>副所長</td><td>工研院</td></tr>
+                    <tr><td>理事</td><td>郭致宏</td><td>副教授</td><td>國立成功大學</td></tr>
+                    <tr><td>理事</td><td>許志仲</td><td>副教授</td><td>國立成功大學</td></tr>
+                    <tr><td>理事</td><td>張亞寧</td><td>助理教授</td><td>國立成功大學</td></tr>
+                    <tr><td>理事</td><td>陳坤志</td><td>副教授</td><td>國立陽明交通大學</td></tr>
+                    <tr><td>理事</td><td>周政毅</td><td>資深工程師</td><td>個人開源貢獻者</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              {/* 監事會 */}
+              <h3 className="text-2xl font-semibold mb-4 text-primary">{isEnglish ? 'Board of Supervisors' : '監事會'}</h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-full border text-left">
+                  <thead>
+                    <tr className="bg-primary text-white">
+                      <th className="px-4 py-2">{isEnglish ? 'Title' : '職稱'}</th>
+                      <th className="px-4 py-2">{isEnglish ? 'Name' : '姓名'}</th>
+                      <th className="px-4 py-2">{isEnglish ? 'Position' : '職稱'}</th>
+                      <th className="px-4 py-2">{isEnglish ? 'Organization' : '單位'}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>常務監事</td><td>林偉棻</td><td>兼任教授</td><td>國立清華大學</td></tr>
+                    <tr><td>監事</td><td>謝明得</td><td>教授</td><td>國立成功大學</td></tr>
+                    <tr><td>監事</td><td>張益興</td><td>兼任教授</td><td>臺灣大學重點科技研究學院</td></tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>

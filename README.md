@@ -1,4 +1,4 @@
-# 台灣高效能運算教育協會網站 (TWHPC Website)
+# 台灣高效能運算教育協會網站 (TWHPCEdu Website)
 
 這是台灣高效能運算教育協會的官方網站專案，使用 Next.js、TypeScript 和 Tailwind CSS 構建。網站支援中英文雙語，並採用響應式設計，適配桌面、平板和手機。
 
@@ -105,7 +105,7 @@ twhpcorg-site/
 ├── tsconfig.json         # TypeScript 配置
 ├── package.json          # 專案依賴和腳本
 ├── DEVELOPMENT_LOG.md    # 開發日誌
-└── TWHPC_Website_Spec_v1.0.md # 網站規格書
+└── TWHPCEdu_Website_Spec_v1.0.md # 網站規格書
 ```
 
 ## 多語言支援

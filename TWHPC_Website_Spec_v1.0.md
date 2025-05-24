@@ -81,7 +81,7 @@ _發行日 / Issued: 2025-05-21_
 1. **Hero Banner**  
 　- 主視覺（背景圖/協會標誌/標語/一段簡介）
 2. **協會簡介（One-liner）**  
-　- TWHPC 致力於培育具備理論與實務能力的 HPC 與 IC 設計人才，連結學界與產業需求。
+　- TWHPCEdu 致力於培育具備理論與實務能力的 HPC 與 IC 設計人才，連結學界與產業需求。
 3. **開放研究 / 重點專案 Highlight**  
 　- 各專案卡片（如 BlackBear、ACALSim）
 4. **最新消息 / 活動**  
@@ -100,7 +100,7 @@ _發行日 / Issued: 2025-05-21_
 ## 5. Footer 設計
 
 1. **協會簡介 One-liner**  
-　TWHPC 致力於培育具備理論與實務能力的 HPC 與 IC 設計人才，連結學界與產業需求。  
+　TWHPCEdu 致力於培育具備理論與實務能力的 HPC 與 IC 設計人才，連結學界與產業需求。  
 2. **聯絡方式**  
 　Email: contact@twhpc.org  
 3. **快速連結**  

@@ -14,12 +14,12 @@ const Footer: React.FC = () => {
           {/* 協會簡介 */}
           <div>
             <h3 className="text-xl font-bold mb-4">
-              {isEnglish ? 'About TWHPC' : '關於高效能運算協會'}
+              {isEnglish ? 'About TWHPCEdu' : '關於高效能運算協會'}
             </h3>
             <p className="text-white/90 mb-4">
               {isEnglish
-                ? 'TWHPC is dedicated to cultivating talents with theoretical and practical capabilities in HPC and IC design, connecting academic and industry needs.'
-                : 'TWHPC 致力於培育具備理論與實務能力的 HPC 與 IC 設計人才，連結學界與產業需求。'}
+                ? 'TWHPCEdu is dedicated to cultivating talents with theoretical and practical capabilities in HPC and IC design, connecting academic and industry needs.'
+                : 'TWHPCEdu 致力於培育具備理論與實務能力的 HPC 與 IC 設計人才，連結學界與產業需求。'}
             </p>
           </div>
 

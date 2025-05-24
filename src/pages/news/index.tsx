@@ -15,7 +15,7 @@ export default function News() {
   const newsItems = [
     {
       id: 'annual-conference-2025',
-      title: isEnglish ? 'TWHPC Annual Conference 2025' : '2025 年高效能運算協會年度會議',
+      title: isEnglish ? 'TWHPCEdu Annual Conference 2025' : '2025 年高效能運算協會年度會議',
       date: '2025-06-15',
       excerpt: isEnglish 
         ? 'Join us for the annual conference featuring keynote speakers from academia and industry.' 
@@ -36,7 +36,7 @@ export default function News() {
       title: isEnglish ? 'Industry Partnership Program' : '產業合作夥伴計畫',
       date: '2025-04-10',
       excerpt: isEnglish 
-        ? 'TWHPC launches a new program to strengthen collaboration with industry partners.' 
+        ? 'TWHPCEdu launches a new program to strengthen collaboration with industry partners.' 
         : '高效能運算協會推出新計畫，加強與產業合作夥伴的合作。',
       link: '/news/industry-partnership'
     }
