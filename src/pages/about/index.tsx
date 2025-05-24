@@ -146,9 +146,22 @@ export default function About() {
             {/* 左側導航目錄 */}
             <div className="md:w-64 flex-shrink-0">
               <div className="sticky top-24 bg-white rounded-lg border border-gray-100 shadow-sm p-4">
-                <h3 className="text-lg font-medium mb-4 text-dark-blue border-b pb-2">
-                  {isEnglish ? 'Navigation' : '導覽'}
-                </h3>
+                <a
+  href="#about-us"
+  className="block text-lg font-medium mb-4 text-dark-blue border-b pb-2 cursor-pointer hover:text-primary focus:text-primary outline-none"
+  onClick={e => {
+    e.preventDefault();
+    const aboutTop = document.getElementById('about-us');
+    if (aboutTop) {
+      window.scrollTo({ top: aboutTop.offsetTop - 100, behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }}
+  tabIndex={0}
+>
+  {isEnglish ? 'About Us' : '關於我們'}
+</a>
                 <div className="flex flex-col space-y-2">
                   {sections.map((section) => (
                     <a
