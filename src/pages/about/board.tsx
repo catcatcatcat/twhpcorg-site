@@ -6,6 +6,94 @@ import Layout from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
+// Board member data structure with both languages
+type BoardMember = {
+  title: { zh: string; en: string };
+  name: { zh: string; en: string };
+  position: { zh: string; en: string };
+  organization: { zh: string; en: string };
+};
+
+// Board of Directors data
+const directors: BoardMember[] = [
+  {
+    title: { zh: '理事', en: 'Director' },
+    name: { zh: '楊光磊', en: 'Kuang-Lei Yang' },
+    position: { zh: '產學創新學院執行長', en: 'CEO of Industry-Academia Innovation' },
+    organization: { zh: '臺灣科技大學', en: 'National Taiwan University of Science and Technology' }
+  },
+  {
+    title: { zh: '理事', en: 'Director' },
+    name: { zh: '陳添福', en: 'Tien-Fu Chen' },
+    position: { zh: '教授', en: 'Professor' },
+    organization: { zh: '國立陽明交通大學', en: 'National Yang Ming Chiao Tung University' }
+  },
+  {
+    title: { zh: '理事', en: 'Director' },
+    name: { zh: '鄭良加', en: 'Liang-Chia Cheng' },
+    position: { zh: '組長', en: 'Division Director' },
+    organization: { zh: '工研院', en: 'ITRI' }
+  },
+  {
+    title: { zh: '理事', en: 'Director' },
+    name: { zh: '盧銘俊', en: 'Ming-Chun Lu' },
+    position: { zh: '副所長', en: 'Deputy Director' },
+    organization: { zh: '工研院', en: 'ITRI' }
+  },
+  {
+    title: { zh: '理事', en: 'Director' },
+    name: { zh: '郭致宏', en: 'Chih-Hung Kuo' },
+    position: { zh: '副教授', en: 'Associate Professor' },
+    organization: { zh: '國立成功大學', en: 'National Cheng Kung University' }
+  },
+  {
+    title: { zh: '理事', en: 'Director' },
+    name: { zh: '許志仲', en: 'Chih-Chung Hsu' },
+    position: { zh: '副教授', en: 'Associate Professor' },
+    organization: { zh: '國立成功大學', en: 'National Cheng Kung University' }
+  },
+  {
+    title: { zh: '理事', en: 'Director' },
+    name: { zh: '張亞寧', en: 'Ya-Ning Chang' },
+    position: { zh: '助理教授', en: 'Assistant Professor' },
+    organization: { zh: '國立成功大學', en: 'National Cheng Kung University' }
+  },
+  {
+    title: { zh: '理事', en: 'Director' },
+    name: { zh: '陳坤志', en: 'Kun-Chih Chen' },
+    position: { zh: '副教授', en: 'Associate Professor' },
+    organization: { zh: '國立陽明交通大學', en: 'National Yang Ming Chiao Tung University' }
+  },
+  {
+    title: { zh: '理事', en: 'Director' },
+    name: { zh: '周政毅', en: 'Cheng-Yi Chou' },
+    position: { zh: '資深工程師', en: 'Senior Engineer' },
+    organization: { zh: '個人開源貢獻者', en: 'Independent Contributor' }
+  }
+];
+
+// Board of Supervisors data
+const supervisors: BoardMember[] = [
+  {
+    title: { zh: '常務監事', en: 'Managing Supervisor' },
+    name: { zh: '林偉棻', en: 'Wei-Fen Lin' },
+    position: { zh: '兼任教授', en: 'Adjunct Professor' },
+    organization: { zh: '國立清華大學', en: 'National Tsing Hua University' }
+  },
+  {
+    title: { zh: '監事', en: 'Supervisor' },
+    name: { zh: '謝明得', en: 'Ming-Te Hsieh' },
+    position: { zh: '教授', en: 'Professor' },
+    organization: { zh: '國立成功大學', en: 'National Cheng Kung University' }
+  },
+  {
+    title: { zh: '監事', en: 'Supervisor' },
+    name: { zh: '張益興', en: 'Yi-Hsing Chang' },
+    position: { zh: '兼任教授', en: 'Adjunct Professor' },
+    organization: { zh: '臺灣大學重點科技研究學院', en: 'Graduate School of Advanced Technology' }
+  }
+];
+
 export default function Board() {
   const { t } = useTranslation('common');
   const router = useRouter();
@@ -78,15 +166,14 @@ export default function Board() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr><td>理事</td><td>楊光磊</td><td>產學創新學院執行長</td><td>臺灣科技大學</td></tr>
-                    <tr><td>理事</td><td>陳添福</td><td>教授</td><td>國立陽明交通大學</td></tr>
-                    <tr><td>理事</td><td>鄭良加(工研院)</td><td>組長</td><td>工研院</td></tr>
-                    <tr><td>理事</td><td>盧銘俊(工研院)</td><td>副所長</td><td>工研院</td></tr>
-                    <tr><td>理事</td><td>郭致宏</td><td>副教授</td><td>國立成功大學</td></tr>
-                    <tr><td>理事</td><td>許志仲</td><td>副教授</td><td>國立成功大學</td></tr>
-                    <tr><td>理事</td><td>張亞寧</td><td>助理教授</td><td>國立成功大學</td></tr>
-                    <tr><td>理事</td><td>陳坤志</td><td>副教授</td><td>國立陽明交通大學</td></tr>
-                    <tr><td>理事</td><td>周政毅</td><td>資深工程師</td><td>個人開源貢獻者</td></tr>
+                    {directors.map((director, index) => (
+                      <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                        <td className="px-4 py-2 border">{isEnglish ? director.title.en : director.title.zh}</td>
+                        <td className="px-4 py-2 border">{isEnglish ? director.name.en : director.name.zh}</td>
+                        <td className="px-4 py-2 border">{isEnglish ? director.position.en : director.position.zh}</td>
+                        <td className="px-4 py-2 border">{isEnglish ? director.organization.en : director.organization.zh}</td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>
@@ -103,9 +190,14 @@ export default function Board() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr><td>常務監事</td><td>林偉棻</td><td>兼任教授</td><td>國立清華大學</td></tr>
-                    <tr><td>監事</td><td>謝明得</td><td>教授</td><td>國立成功大學</td></tr>
-                    <tr><td>監事</td><td>張益興</td><td>兼任教授</td><td>臺灣大學重點科技研究學院</td></tr>
+                    {supervisors.map((supervisor, index) => (
+                      <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                        <td className="px-4 py-2 border">{isEnglish ? supervisor.title.en : supervisor.title.zh}</td>
+                        <td className="px-4 py-2 border">{isEnglish ? supervisor.name.en : supervisor.name.zh}</td>
+                        <td className="px-4 py-2 border">{isEnglish ? supervisor.position.en : supervisor.position.zh}</td>
+                        <td className="px-4 py-2 border">{isEnglish ? supervisor.organization.en : supervisor.organization.zh}</td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>
