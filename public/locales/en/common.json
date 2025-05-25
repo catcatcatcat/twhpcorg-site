@@ -20,7 +20,19 @@
   },
   "projects": {
     "title": "Key Projects",
-    "viewAll": "View All"
+    "viewAll": "View All",
+    "callForProposal": "Call for Proposal",
+    "callForProposalDesc": "We adopt the Call for Proposal model to encourage innovative research projects",
+    "ourApproach": "Our Approach",
+    "resourceMatching": "Complete Resource Matching Mechanism",
+    "howToParticipate": "How to Participate",
+    "joinOpenSource": "Join Open Source Development",
+    "submitProposal": "Submit Research Proposals",
+    "attendSeminars": "Attend Technical Seminars",
+    "applyForProjects": "Apply for Industry-Academia Projects",
+    "contactForMore": "Contact Us for More Information",
+    "researchInitiatives": "Our Research Initiatives",
+    "exploreProjects": "Explore our open research projects and platforms"
   },
   "news": {
     "title": "Latest News",
@@ -37,7 +49,7 @@
     "quickLinks": "Quick Links",
     "contact": "Contact",
     "support": "Support Us",
-    "copyright": "© 2025 Taiwan High Performance Computing Education Association. All Rights Reserved.",
+    "copyright": " 2025 Taiwan High Performance Computing Education Association. All Rights Reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Use"
   }

@@ -20,7 +20,19 @@
   },
   "projects": {
     "title": "重點專案",
-    "viewAll": "查看全部"
+    "viewAll": "查看全部",
+    "callForProposal": "公開募集合作研究機制",
+    "callForProposalDesc": "我們採用 Call for Proposal 模式，鼓勵創新研究計畫",
+    "ourApproach": "我們的方式",
+    "resourceMatching": "我們提供完整的資源媒合機制",
+    "howToParticipate": "參與方式",
+    "joinOpenSource": "加入開源專案開發",
+    "submitProposal": "提交研究計畫提案",
+    "attendSeminars": "參與技術研討會",
+    "applyForProjects": "申請產學合作計畫",
+    "contactForMore": "聯絡我們獲取更多資訊",
+    "researchInitiatives": "我們的研究計畫",
+    "exploreProjects": "探索我們的開放研究專案和平台"
   },
   "news": {
     "title": "最新消息",
@@ -37,7 +49,7 @@
     "quickLinks": "快速連結",
     "contact": "聯絡方式",
     "support": "支持我們",
-    "copyright": "© 2025 台灣高效能運算教育協會. 版權所有.",
+    "copyright": " 2025 台灣高效能運算教育協會. 版權所有.",
     "privacy": "隱私權政策",
     "terms": "使用條款"
   }
