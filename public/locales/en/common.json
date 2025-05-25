@@ -44,6 +44,20 @@
   "faq": {
     "title": "Frequently Asked Questions"
   },
+  "acalsimPage": {
+    "breadcrumbBase": "Projects & Research",
+    "breadcrumbCurrent": "ACALSim Platform",
+    "title": "ACALSim Simulation Platform",
+    "sectionTitle": "ACALSim Simulation Platform",
+    "sectionSubtitle": "ACALSim (Advanced Computing Architecture Lab Simulator) is a professional simulation platform for research in high-performance computing and integrated circuit (IC) design.",
+    "contentTitle": "ACALSim Simulation Platform",
+    "description": "ACALSim (Advanced Computing Architecture Lab Simulator) is a professional simulation platform for research in high-performance computing and integrated circuit (IC) design.",
+    "featuresTitle": "Key Features:",
+    "feature1": "High-performance computing system simulation",
+    "feature2": "IC design verification",
+    "feature3": "Performance analysis and optimization tools",
+    "feature4": "Educational training support"
+  },
   "blackbearPage": {
     "breadcrumbBase": "Projects & Research",
     "breadcrumbCurrent": "BlackBear Project",

@@ -65,9 +65,23 @@ export default function ACALSim() {
             
             {/* 內容將在這裡填充 */}
             <div className="bg-gray-50 p-8 rounded-lg border border-gray-100">
-              <p className="text-center text-gray-500 italic">
-                {isEnglish ? 'Content coming soon...' : '內容即將推出...'}
-              </p>
+              <h3 className="text-2xl font-semibold text-dark-blue mb-4">
+  {isEnglish ? 'ACALSim Simulation Platform' : 'ACALSim 模擬平台'}
+</h3>
+<p className="mb-4 text-gray-700">
+  {isEnglish
+    ? 'ACALSim (Advanced Computing Architecture Lab Simulator) is a professional simulation platform for research in high-performance computing and integrated circuit (IC) design.'
+    : 'ACALSim（Advanced Computing Architecture Lab Simulator）是一個專業的模擬平台，用於高效能運算和積體電路設計研究。'}
+</p>
+<h4 className="text-xl font-semibold text-dark-blue mb-2">
+  {isEnglish ? 'Key Features:' : '功能與特色：'}
+</h4>
+<ul className="list-disc pl-6 space-y-2 text-gray-700">
+  <li>{isEnglish ? 'High-performance computing system simulation' : '高效能運算系統模擬'}</li>
+  <li>{isEnglish ? 'IC design verification' : '積體電路設計驗證'}</li>
+  <li>{isEnglish ? 'Performance analysis and optimization tools' : '效能分析與最佳化工具'}</li>
+  <li>{isEnglish ? 'Educational training support' : '教育訓練支援'}</li>
+</ul>
             </div>
           </div>
         </div>

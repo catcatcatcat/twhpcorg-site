@@ -44,6 +44,20 @@
   "faq": {
     "title": "常見問題"
   },
+  "acalsimPage": {
+    "breadcrumbBase": "專案與研究",
+    "breadcrumbCurrent": "ACALSim 模擬平台",
+    "title": "ACALSim 模擬平台",
+    "sectionTitle": "ACALSim 模擬平台",
+    "sectionSubtitle": "ACALSim（Advanced Computing Architecture Lab Simulator）是一個專業的模擬平台，用於高效能運算和積體電路設計研究。",
+    "contentTitle": "ACALSim 模擬平台",
+    "description": "ACALSim（Advanced Computing Architecture Lab Simulator）是一個專業的模擬平台，用於高效能運算和積體電路設計研究。",
+    "featuresTitle": "功能與特色：",
+    "feature1": "高效能運算系統模擬",
+    "feature2": "積體電路設計驗證",
+    "feature3": "效能分析與最佳化工具",
+    "feature4": "教育訓練支援"
+  },
   "blackbearPage": {
     "breadcrumbBase": "專案與研究",
     "breadcrumbCurrent": "BlackBear 開源計畫",

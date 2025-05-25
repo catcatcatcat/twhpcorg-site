@@ -272,6 +272,16 @@
 
 ---
 
+## 2025-05-25: ACALSim 專案子頁面內容上線
+
+- 新增 `/projects/acalsim` 子頁面，內容包含 ACALSim 平台介紹與功能特色，並採用與 BlackBear 頁面一致的設計與排版。
+- 完成 ACALSim 頁面的中英文多語言內容，並於 `public/locales/zh/common.json` 及 `public/locales/en/common.json` 新增 `acalsimPage` 條目。
+- 確認 ACALSim 已列於「專案與研究」總覽頁面，導覽連結完整。
+- 實作內容完全符合 TWHPC 網站現有的設計語言與國際化策略。
+
+
+---
+
 ## 2025-05-25: BlackBear 專案頁面多語言重構
 
 - 新增 BlackBear 專案頁面內容，並將所有中英文內容集中至 next-i18next 的翻譯檔案（`public/locales/zh/common.json`、`public/locales/en/common.json`）。
