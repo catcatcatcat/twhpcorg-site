@@ -276,6 +276,169 @@ export default function About() {
                           </table>
                         </div>
                       </div>
+                    ) : section.id === 'history' ? (
+                      <div className="bg-white p-8 rounded-lg border border-gray-100 shadow-sm">
+                        <div className="space-y-8">
+                          {/* 時間軸 */}
+                          <div className="relative border-l-2 border-primary pl-8 ml-4 space-y-10">
+                            {/* 2023年 - 成立 */}
+                            <div className="relative">
+                              <div className="absolute -left-10 mt-1.5 h-6 w-6 rounded-full border-2 border-primary bg-white flex items-center justify-center">
+                                <div className="h-3 w-3 rounded-full bg-primary"></div>
+                              </div>
+                              <div className="mb-2">
+                                <span className="text-xl font-bold text-primary">2023</span>
+                              </div>
+                              <h4 className="text-lg font-semibold mb-2">
+                                {isEnglish ? 'Association Founding' : '協會成立'}
+                              </h4>
+                              <p className="text-gray-700">
+                                {isEnglish 
+                                  ? 'Taiwan High Performance Computing Education Association was officially established, bringing together experts from academia and industry to promote HPC education.' 
+                                  : '台灣高效能運算教育協會正式成立，匯集學界與產業專家，共同推動高效能運算教育。'}
+                              </p>
+                            </div>
+                            
+                            {/* 2024年 - 首次年會 */}
+                            <div className="relative">
+                              <div className="absolute -left-10 mt-1.5 h-6 w-6 rounded-full border-2 border-primary bg-white flex items-center justify-center">
+                                <div className="h-3 w-3 rounded-full bg-primary"></div>
+                              </div>
+                              <div className="mb-2">
+                                <span className="text-xl font-bold text-primary">2024</span>
+                              </div>
+                              <h4 className="text-lg font-semibold mb-2">
+                                {isEnglish ? 'First Annual Conference' : '首屆年度會議'}
+                              </h4>
+                              <p className="text-gray-700">
+                                {isEnglish 
+                                  ? 'Held the first annual conference with over 200 participants from universities and industry partners. Launched the ACALSim platform and BlackBear open source project.' 
+                                  : '舉辦首屆年度會議，有超過200位來自大學和產業合作夥伴的參與者。正式發布 ACALSim 平台和 BlackBear 開源專案。'}
+                              </p>
+                            </div>
+                            
+                            {/* 2025年 - 教育計畫擴展 */}
+                            <div className="relative">
+                              <div className="absolute -left-10 mt-1.5 h-6 w-6 rounded-full border-2 border-primary bg-white flex items-center justify-center">
+                                <div className="h-3 w-3 rounded-full bg-primary"></div>
+                              </div>
+                              <div className="mb-2">
+                                <span className="text-xl font-bold text-primary">2025</span>
+                              </div>
+                              <h4 className="text-lg font-semibold mb-2">
+                                {isEnglish ? 'Education Program Expansion' : '教育計畫擴展'}
+                              </h4>
+                              <p className="text-gray-700">
+                                {isEnglish 
+                                  ? 'Expanded our education programs to 15 universities across Taiwan. Established industry partnership program with 8 leading technology companies.' 
+                                  : '將教育計畫擴展至全台15所大學。與8家領先科技公司建立產業合作夥伴計畫。'}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ) : section.id === 'annual-report' ? (
+                      <div className="bg-white p-8 rounded-lg border border-gray-100 shadow-sm">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                          {/* 2024年報告 */}
+                          <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-shadow">
+                            <div className="flex items-center justify-between mb-4">
+                              <h4 className="text-xl font-bold text-dark-blue">
+                                {isEnglish ? '2024 Annual Report' : '2024 年度報告'}
+                              </h4>
+                              <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">
+                                {isEnglish ? 'Latest' : '最新'}
+                              </span>
+                            </div>
+                            <p className="text-gray-600 mb-4">
+                              {isEnglish 
+                                ? 'Our inaugural annual report highlights the establishment of key programs and partnerships.' 
+                                : '我們的首份年度報告重點介紹了關鍵計畫和合作夥伴關係的建立。'}
+                            </p>
+                            <div className="flex items-center justify-between">
+                              <span className="text-sm text-gray-500">PDF, 5.2 MB</span>
+                              <button className="bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors">
+                                {isEnglish ? 'Download' : '下載'}
+                              </button>
+                            </div>
+                          </div>
+                          
+                          {/* 2023年報告 */}
+                          <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-shadow">
+                            <div className="flex items-center justify-between mb-4">
+                              <h4 className="text-xl font-bold text-dark-blue">
+                                {isEnglish ? '2023 Annual Report' : '2023 年度報告'}
+                              </h4>
+                              <span className="bg-gray-200 text-gray-600 px-3 py-1 rounded-full text-sm font-medium">
+                                {isEnglish ? 'Archive' : '存檔'}
+                              </span>
+                            </div>
+                            <p className="text-gray-600 mb-4">
+                              {isEnglish 
+                                ? 'Foundation report covering our initial goals, vision, and organizational structure.' 
+                                : '基礎報告，涵蓋我們的初始目標、願景和組織結構。'}
+                            </p>
+                            <div className="flex items-center justify-between">
+                              <span className="text-sm text-gray-500">PDF, 3.8 MB</span>
+                              <button className="bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors">
+                                {isEnglish ? 'Download' : '下載'}
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ) : section.id === 'partners' ? (
+                      <div className="bg-white p-8 rounded-lg border border-gray-100 shadow-sm">
+                        {/* 學術合作夥伴 */}
+                        <div className="mb-10">
+                          <h3 className="text-2xl font-semibold mb-6 text-primary">
+                            {isEnglish ? 'Academic Partners' : '學術合作夥伴'}
+                          </h3>
+                          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                            {[
+                              { name: isEnglish ? 'National Taiwan University' : '國立臺灣大學', logo: '/images/partners/ntu-logo.png' },
+                              { name: isEnglish ? 'National Yang Ming Chiao Tung University' : '國立陽明交通大學', logo: '/images/partners/nycu-logo.png' },
+                              { name: isEnglish ? 'National Cheng Kung University' : '國立成功大學', logo: '/images/partners/ncku-logo.png' },
+                              { name: isEnglish ? 'National Tsing Hua University' : '國立清華大學', logo: '/images/partners/nthu-logo.png' },
+                              { name: isEnglish ? 'National Taiwan University of Science and Technology' : '國立臺灣科技大學', logo: '/images/partners/ntust-logo.png' },
+                              { name: isEnglish ? 'National Taiwan Normal University' : '國立臺灣師範大學', logo: '/images/partners/ntnu-logo.png' }
+                            ].map((partner, index) => (
+                              <div key={index} className="bg-gray-50 p-4 rounded-lg border border-gray-100 flex flex-col items-center justify-center text-center hover:shadow-md transition-shadow">
+                                <div className="w-16 h-16 bg-gray-200 rounded-full mb-3 flex items-center justify-center">
+                                  <span className="text-2xl font-bold text-primary">{partner.name.charAt(0)}</span>
+                                </div>
+                                <p className="font-medium text-gray-800">{partner.name}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        {/* 產業合作夥伴 */}
+                        <div>
+                          <h3 className="text-2xl font-semibold mb-6 text-primary">
+                            {isEnglish ? 'Industry Partners' : '產業合作夥伴'}
+                          </h3>
+                          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                            {[
+                              { name: 'TSMC', logo: '/images/partners/tsmc-logo.png' },
+                              { name: 'MediaTek', logo: '/images/partners/mediatek-logo.png' },
+                              { name: 'ITRI', logo: '/images/partners/itri-logo.png' },
+                              { name: 'Synopsys Taiwan', logo: '/images/partners/synopsys-logo.png' },
+                              { name: 'Cadence Taiwan', logo: '/images/partners/cadence-logo.png' },
+                              { name: 'Siemens EDA', logo: '/images/partners/siemens-logo.png' },
+                              { name: 'AMD Taiwan', logo: '/images/partners/amd-logo.png' },
+                              { name: 'NVIDIA Taiwan', logo: '/images/partners/nvidia-logo.png' }
+                            ].map((partner, index) => (
+                              <div key={index} className="bg-gray-50 p-4 rounded-lg border border-gray-100 flex flex-col items-center justify-center text-center hover:shadow-md transition-shadow">
+                                <div className="w-12 h-12 bg-gray-200 rounded-full mb-3 flex items-center justify-center">
+                                  <span className="text-xl font-bold text-primary">{partner.name.charAt(0)}</span>
+                                </div>
+                                <p className="font-medium text-gray-800">{partner.name}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
                     ) : (
                       <div className="bg-gray-50 p-8 rounded-lg border border-gray-100">
                         <p className="text-center text-gray-500 italic">

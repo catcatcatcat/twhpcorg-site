@@ -5,42 +5,33 @@ import { useRouter } from 'next/router';
 import Layout from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { getAllNewsPosts } from '@/lib/api';
+import Image from 'next/image';
 
-export default function News() {
+type NewsPost = {
+  slug: string;
+  title: string;
+  date: string;
+  excerpt: string;
+  coverImage?: string;
+};
+
+type NewsProps = {
+  allPosts: NewsPost[];
+};
+
+export default function News({ allPosts }: NewsProps) {
   const { t } = useTranslation('common');
   const router = useRouter();
   const isEnglish = router.locale === 'en';
 
-  // 最新消息資料
-  const newsItems = [
-    {
-      id: 'annual-conference-2025',
-      title: isEnglish ? 'TWHPCEdu Annual Conference 2025' : '2025 年高效能運算協會年度會議',
-      date: '2025-06-15',
-      excerpt: isEnglish 
-        ? 'Join us for the annual conference featuring keynote speakers from academia and industry.' 
-        : '參加我們的年度會議，特邀來自學界和產業界的主講嘉賓。',
-      link: '/news/annual-conference-2025'
-    },
-    {
-      id: 'acalsim-course-launch',
-      title: isEnglish ? 'New ACALSim Course Series Launched' : '全新 ACALSim 課程系列推出',
-      date: '2025-05-01',
-      excerpt: isEnglish 
-        ? 'We are excited to announce our new comprehensive course series on ACALSim platform.' 
-        : '我們很高興宣布推出全新的 ACALSim 平台綜合課程系列。',
-      link: '/news/acalsim-course-launch'
-    },
-    {
-      id: 'industry-partnership',
-      title: isEnglish ? 'Industry Partnership Program' : '產業合作夥伴計畫',
-      date: '2025-04-10',
-      excerpt: isEnglish 
-        ? 'TWHPCEdu launches a new program to strengthen collaboration with industry partners.' 
-        : '高效能運算協會推出新計畫，加強與產業合作夥伴的合作。',
-      link: '/news/industry-partnership'
-    }
-  ];
+  // 格式化日期
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return isEnglish 
+      ? date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+      : date.toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' });
+  };
 
   return (
     <Layout>
@@ -84,21 +75,46 @@ export default function News() {
             
             {/* 新聞列表 */}
             <div className="space-y-8">
-              {newsItems.map((item, index) => (
+              {allPosts.map((post, index) => (
                 <motion.div
-                  key={item.id}
+                  key={post.slug}
                   className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.1 }}
                 >
-                  <div className="text-sm text-gray-500 mb-2">{item.date}</div>
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-gray-600 mb-4">{item.excerpt}</p>
-                  <div className="bg-gray-50 p-4 rounded-lg border border-gray-100 mb-4">
-                    <p className="text-center text-gray-500 italic">
-                      {isEnglish ? 'Content coming soon...' : '內容即將推出...'}
-                    </p>
+                  <div className="flex flex-col md:flex-row gap-6">
+                    {post.coverImage && (
+                      <div className="md:w-1/3 flex-shrink-0">
+                        <Link href={`/news/${post.slug}`} className="block">
+                          <div className="relative w-full h-48 rounded-lg overflow-hidden">
+                            <Image 
+                              src={post.coverImage} 
+                              alt={post.title}
+                              fill
+                              style={{ objectFit: 'cover' }}
+                              className="transition-transform hover:scale-105 duration-300"
+                            />
+                          </div>
+                        </Link>
+                      </div>
+                    )}
+                    <div className={post.coverImage ? "md:w-2/3" : "w-full"}>
+                      <div className="text-sm text-gray-500 mb-2">{formatDate(post.date)}</div>
+                      <Link href={`/news/${post.slug}`} className="block group">
+                        <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{post.title}</h3>
+                      </Link>
+                      <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                      <Link 
+                        href={`/news/${post.slug}`}
+                        className="inline-flex items-center text-primary hover:text-primary/80 transition-colors"
+                      >
+                        <span className="mr-2">{isEnglish ? 'Read More' : '閱讀更多'}</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                        </svg>
+                      </Link>
+                    </div>
                   </div>
                 </motion.div>
               ))}
@@ -110,11 +126,17 @@ export default function News() {
   );
 }
 
-// 獲取靜態屬性 - 用於國際化
+// 獲取靜態屬性 - 用於國際化和新聞文章
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  const allPosts = getAllNewsPosts(
+    ['slug', 'title', 'title_zh', 'date', 'excerpt', 'excerpt_zh', 'coverImage'],
+    locale as string
+  );
+
   return {
     props: {
       ...(await serverSideTranslations(locale || 'zh', ['common'])),
+      allPosts,
     },
   };
 };
