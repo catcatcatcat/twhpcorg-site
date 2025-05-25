@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useTranslation } from 'next-i18next';
-import Image from 'next/image';
 
 // 導航項目類型定義
 interface NavItem {
@@ -24,7 +22,7 @@ interface NavItem {
 
 const Navbar: React.FC = () => {
   const router = useRouter();
-  const { t } = useTranslation('common');
+  // We're using isEnglish directly instead of t function
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -351,7 +349,7 @@ const Navbar: React.FC = () => {
                           : item.dropdown[0].href) 
                         : item.href)}
                     className="text-lg font-medium"
-                    onClick={(e) => {
+                    onClick={() => {
                       if (item.dropdown) {
                         // Don't prevent default anymore - we want to navigate
                         // Just toggle the dropdown for visual feedback

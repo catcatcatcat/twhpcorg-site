@@ -1,14 +1,12 @@
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
-import { useRouter } from 'next/router';
 import Layout from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 export default function BlackBear() {
   const { t } = useTranslation('common');
-  const router = useRouter();
 
   return (
     <Layout>

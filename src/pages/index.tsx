@@ -1,15 +1,13 @@
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
-import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
 
 // 首頁組件
 export default function Home() {
-  const { t } = useTranslation('common');
+  // Using isEnglish directly for translations
   const router = useRouter();
   const isEnglish = router.locale === 'en';
 
