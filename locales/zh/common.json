@@ -1,0 +1,113 @@
+{
+  "title": "台灣高效能運算教育協會",
+  "nav": {
+    "home": "首頁",
+    "about": "關於協會",
+    "projects": "重點專案",
+    "news": "最新消息",
+    "resources": "資源中心",
+    "contact": "聯絡我們",
+    "membership": "會員專區"
+  },
+  "hero": {
+    "title": "台灣高效能運算教育協會",
+    "subtitle": "推動高效能運算教育與研究的專業組織",
+    "cta": "了解更多"
+  },
+  "about": {
+    "title": "關於協會",
+    "description": "台灣高效能運算教育協會致力於推廣高效能運算技術，提升台灣在此領域的競爭力。我們提供教育資源、舉辦研討會，並促進產學合作。"
+  },
+  "projects": {
+    "title": "重點專案",
+    "viewAll": "查看全部",
+    "callForProposal": "公開募集合作研究機制",
+    "callForProposalDesc": "我們採用 Call for Proposal 模式，鼓勵創新研究計畫",
+    "ourApproach": "我們的方式",
+    "resourceMatching": "我們提供完整的資源媒合機制",
+    "howToParticipate": "參與方式",
+    "joinOpenSource": "加入開源專案開發",
+    "submitProposal": "提交研究計畫提案",
+    "attendSeminars": "參與技術研討會",
+    "applyForProjects": "申請產學合作計畫",
+    "contactForMore": "聯絡我們獲取更多資訊",
+    "researchInitiatives": "我們的研究計畫",
+    "exploreProjects": "探索我們的開放研究專案和平台"
+  },
+  "news": {
+    "title": "最新消息",
+    "viewAll": "查看全部"
+  },
+  "partners": {
+    "title": "合作夥伴"
+  },
+  "faq": {
+    "title": "常見問題"
+  },
+  "acalsimPage": {
+    "breadcrumbBase": "專案與研究",
+    "breadcrumbCurrent": "ACALSim 模擬平台",
+    "title": "ACALSim 模擬平台",
+    "sectionTitle": "ACALSim 模擬平台",
+    "sectionSubtitle": "ACALSim（Advanced Computing Architecture Lab Simulator）是一個專業的模擬平台，用於高效能運算和積體電路設計研究。",
+    "contentTitle": "ACALSim 模擬平台",
+    "description": "ACALSim（Advanced Computing Architecture Lab Simulator）是一個專業的模擬平台，用於高效能運算和積體電路設計研究。",
+    "featuresTitle": "功能與特色：",
+    "feature1": "高效能運算系統模擬",
+    "feature2": "積體電路設計驗證",
+    "feature3": "效能分析與最佳化工具",
+    "feature4": "教育訓練支援"
+  },
+  "blackbearPage": {
+    "breadcrumbBase": "專案與研究",
+    "breadcrumbCurrent": "BlackBear 開源計畫",
+    "title": "BlackBear 開源計畫",
+    "sectionTitle": "高效能運算模擬與建模",
+    "sectionSubtitle": "推進高效能運算教育和研究的開源專案",
+    "contentTitle": "BlackBear 開源計畫",
+    "description": "BlackBear 是一個開放原始碼的高效能運算專案，旨在提供一個完整的學習和研究平台。",
+    "featuresTitle": "主要特點：",
+    "feature1": "開源程式碼，透明的開發過程",
+    "feature2": "社群驅動的開發模式",
+    "feature3": "實作導向的學習機會",
+    "feature4": "產學合作的研究平台"
+  },
+  "educationPage": {
+    "breadcrumbBase": "教育資源",
+    "breadcrumbCurrent": "教育訓練",
+    "title": "教育訓練",
+    "sectionTitle": "教育訓練計畫",
+    "sectionSubtitle": "我們提供創新的教育方案，結合理論與實務，培養下一代高效能運算人才。",
+    "missionTitle": "培育大型系統整合人才",
+    "missionDescription": "滿足大型IC設計人才缺口，培育具最新趨勢觀念、工具應用實作人才。",
+    "bridgeGapTitle": "弭平學用落差",
+    "bridgeGapDescription": "為業界與學界搭起橋樑，導入產業最新趨勢，建構教學平台。",
+    "practicalTrainingTitle": "提供實作與理論結合的課程",
+    "practicalTrainingDescription": "以Project-Based Learning (PBL) 課程設計，理論與實作並重，確保學員在實作中掌握最新技術和應用。",
+    "courseFeatures": "課程特色",
+    "pblTitle": "專案導向學習 (PBL)",
+    "pblDescription": "我們採用 Project-Based Learning 架構設計課程：",
+    "feature1": "強調實作與問題解決",
+    "feature2": "業界專家參與指導",
+    "feature3": "真實專案經驗",
+    "feature4": "跨領域學習機會",
+    "solutionsTitle": "解決方案",
+    "studentSolution": "針對在學學生",
+    "studentSolutionDesc": "研究與實作並重，發展 hands-on 的人才培訓課程",
+    "professionalSolution": "針對在職人士",
+    "professionalSolutionDesc": "提供終身學習的管道，不斷充實自我技能",
+    "academicSolution": "針對學界教授",
+    "academicSolutionDesc": "媒合企業贊助研究經費，企業可 call for purposal 研究成果將開源，企業雖不擁有成果但可享受其好處，促進產學正循環",
+    "industrySolution": "針對業界專家",
+    "industrySolutionDesc": "提供資源與平台，媒合有志提升自我的學生，給予業界專家舞台。同時透過開源的課程與專案，避免在職公司的智財疑慮"
+  },
+  "footer": {
+    "about": "關於協會",
+    "quickLinks": "快速連結",
+    "contact": "聯絡方式",
+    "support": "支持我們",
+    "copyright": " 2025 台灣高效能運算教育協會. 版權所有.",
+    "privacy": "隱私權政策",
+    "terms": "使用條款"
+  }
+}

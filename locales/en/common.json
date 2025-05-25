@@ -1,0 +1,113 @@
+{
+  "title": "Taiwan High Performance Computing Education Association",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "news": "News",
+    "resources": "Resources",
+    "contact": "Contact",
+    "membership": "Membership"
+  },
+  "hero": {
+    "title": "Taiwan High Performance Computing Education Association",
+    "subtitle": "Advancing Education and Research in High Performance Computing",
+    "cta": "Learn More"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "The Taiwan High Performance Computing Education Association is dedicated to promoting HPC technologies and enhancing Taiwan's competitiveness in this field. We provide educational resources, organize seminars, and facilitate industry-academia collaboration."
+  },
+  "projects": {
+    "title": "Key Projects",
+    "viewAll": "View All",
+    "callForProposal": "Call for Proposal",
+    "callForProposalDesc": "We adopt the Call for Proposal model to encourage innovative research projects",
+    "ourApproach": "Our Approach",
+    "resourceMatching": "Complete Resource Matching Mechanism",
+    "howToParticipate": "How to Participate",
+    "joinOpenSource": "Join Open Source Development",
+    "submitProposal": "Submit Research Proposals",
+    "attendSeminars": "Attend Technical Seminars",
+    "applyForProjects": "Apply for Industry-Academia Projects",
+    "contactForMore": "Contact Us for More Information",
+    "researchInitiatives": "Our Research Initiatives",
+    "exploreProjects": "Explore our open research projects and platforms"
+  },
+  "news": {
+    "title": "Latest News",
+    "viewAll": "View All"
+  },
+  "partners": {
+    "title": "Our Partners"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions"
+  },
+  "acalsimPage": {
+    "breadcrumbBase": "Projects & Research",
+    "breadcrumbCurrent": "ACALSim Platform",
+    "title": "ACALSim Simulation Platform",
+    "sectionTitle": "ACALSim Simulation Platform",
+    "sectionSubtitle": "ACALSim (Advanced Computing Architecture Lab Simulator) is a professional simulation platform for research in high-performance computing and integrated circuit (IC) design.",
+    "contentTitle": "ACALSim Simulation Platform",
+    "description": "ACALSim (Advanced Computing Architecture Lab Simulator) is a professional simulation platform for research in high-performance computing and integrated circuit (IC) design.",
+    "featuresTitle": "Key Features:",
+    "feature1": "High-performance computing system simulation",
+    "feature2": "IC design verification",
+    "feature3": "Performance analysis and optimization tools",
+    "feature4": "Educational training support"
+  },
+  "blackbearPage": {
+    "breadcrumbBase": "Projects & Research",
+    "breadcrumbCurrent": "BlackBear Project",
+    "title": "BlackBear Open Source Project",
+    "sectionTitle": "High Performance Computing Simulation and Modeling",
+    "sectionSubtitle": "An open-source project for advancing HPC education and research",
+    "contentTitle": "BlackBear Open Source Project",
+    "description": "BlackBear is an open-source high-performance computing (HPC) project aimed at providing a comprehensive platform for learning and research.",
+    "featuresTitle": "Key Features:",
+    "feature1": "Open-source code and transparent development process",
+    "feature2": "Community-driven development model",
+    "feature3": "Hands-on learning opportunities",
+    "feature4": "Academia-industry collaborative research platform"
+  },
+  "educationPage": {
+    "breadcrumbBase": "Education Resources",
+    "breadcrumbCurrent": "Education & Training",
+    "title": "Education & Training",
+    "sectionTitle": "Education & Training Programs",
+    "sectionSubtitle": "We provide innovative educational programs that combine theory and practice to cultivate the next generation of high-performance computing talents.",
+    "missionTitle": "Cultivating Large-Scale System Integration Talents",
+    "missionDescription": "Meeting the shortage of large-scale IC design talents by cultivating professionals with the latest trend concepts and practical tool applications.",
+    "bridgeGapTitle": "Bridging Academic-Industry Gap",
+    "bridgeGapDescription": "Building bridges between industry and academia by introducing the latest industry trends and constructing educational platforms.",
+    "practicalTrainingTitle": "Providing Courses that Combine Theory and Practice",
+    "practicalTrainingDescription": "Using Project-Based Learning (PBL) course design, emphasizing both theory and practice to ensure students master the latest technologies and applications through hands-on experience.",
+    "courseFeatures": "Course Features",
+    "pblTitle": "Project-Based Learning (PBL)",
+    "pblDescription": "We adopt the Project-Based Learning framework to design our courses:",
+    "feature1": "Emphasis on practical work and problem-solving",
+    "feature2": "Industry expert participation and guidance",
+    "feature3": "Real project experience",
+    "feature4": "Cross-disciplinary learning opportunities",
+    "solutionsTitle": "Solutions",
+    "studentSolution": "For Students",
+    "studentSolutionDesc": "Research and practical work equally emphasized, developing hands-on talent training programs",
+    "professionalSolution": "For Working Professionals",
+    "professionalSolutionDesc": "Providing lifelong learning channels to continuously enhance skills",
+    "academicSolution": "For Academic Professors",
+    "academicSolutionDesc": "Matching corporate research funding, where companies can call for purposal research with open-source results, benefiting companies without ownership constraints and promoting industry-academia positive cycles",
+    "industrySolution": "For Industry Experts",
+    "industrySolutionDesc": "Providing resources and platforms, matching students eager to improve with industry experts. Simultaneously addressing intellectual property concerns through open-source courses and projects"
+  },
+  "footer": {
+    "about": "About Us",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "support": "Support Us",
+    "copyright": " 2025 Taiwan High Performance Computing Education Association. All Rights Reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
+  }
+}
