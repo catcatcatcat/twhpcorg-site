@@ -35,28 +35,28 @@ export default function Education() {
       title: t('educationPage.studentSolution'),
       description: t('educationPage.studentSolutionDesc'),
       icon: '/assets/images/icons/student.svg',
-      color: 'bg-blue-100 border-blue-300'
+      color: ''
     },
     {
       id: 'professionals',
       title: t('educationPage.professionalSolution'),
       description: t('educationPage.professionalSolutionDesc'),
       icon: '/assets/images/icons/professional.svg',
-      color: 'bg-green-100 border-green-300'
+      color: ''
     },
     {
       id: 'academics',
       title: t('educationPage.academicSolution'),
       description: t('educationPage.academicSolutionDesc'),
       icon: '/assets/images/icons/professor.svg',
-      color: 'bg-purple-100 border-purple-300'
+      color: ''
     },
     {
       id: 'industry',
       title: t('educationPage.industrySolution'),
       description: t('educationPage.industrySolutionDesc'),
       icon: '/assets/images/icons/industry.svg',
-      color: 'bg-amber-100 border-amber-300'
+      color: ''
     }
   ];
 
@@ -321,7 +321,9 @@ export default function Education() {
               {solutions.map((solution, index) => (
                 <motion.div
                   key={solution.id}
-                  className={`p-6 rounded-lg border ${solution.color} shadow-sm`}
+                  className={
+  `p-6 rounded-xl border border-blue-100 bg-white shadow-sm hover:shadow-md transition`
+}
                   variants={fadeIn}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
