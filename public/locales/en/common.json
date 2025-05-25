@@ -44,6 +44,20 @@
   "faq": {
     "title": "Frequently Asked Questions"
   },
+  "blackbearPage": {
+    "breadcrumbBase": "Projects & Research",
+    "breadcrumbCurrent": "BlackBear Project",
+    "title": "BlackBear Open Source Project",
+    "sectionTitle": "High Performance Computing Simulation and Modeling",
+    "sectionSubtitle": "An open-source project for advancing HPC education and research",
+    "contentTitle": "BlackBear Open Source Project",
+    "description": "BlackBear is an open-source high-performance computing (HPC) project aimed at providing a comprehensive platform for learning and research.",
+    "featuresTitle": "Key Features:",
+    "feature1": "Open-source code and transparent development process",
+    "feature2": "Community-driven development model",
+    "feature3": "Hands-on learning opportunities",
+    "feature4": "Academia-industry collaborative research platform"
+  },
   "footer": {
     "about": "About Us",
     "quickLinks": "Quick Links",

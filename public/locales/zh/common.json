@@ -44,6 +44,20 @@
   "faq": {
     "title": "常見問題"
   },
+  "blackbearPage": {
+    "breadcrumbBase": "專案與研究",
+    "breadcrumbCurrent": "BlackBear 開源計畫",
+    "title": "BlackBear 開源計畫",
+    "sectionTitle": "高效能運算模擬與建模",
+    "sectionSubtitle": "推進高效能運算教育和研究的開源專案",
+    "contentTitle": "BlackBear 開源計畫",
+    "description": "BlackBear 是一個開放原始碼的高效能運算專案，旨在提供一個完整的學習和研究平台。",
+    "featuresTitle": "主要特點：",
+    "feature1": "開源程式碼，透明的開發過程",
+    "feature2": "社群驅動的開發模式",
+    "feature3": "實作導向的學習機會",
+    "feature4": "產學合作的研究平台"
+  },
   "footer": {
     "about": "關於協會",
     "quickLinks": "快速連結",

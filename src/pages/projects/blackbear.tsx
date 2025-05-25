@@ -9,7 +9,6 @@ import Link from 'next/link';
 export default function BlackBear() {
   const { t } = useTranslation('common');
   const router = useRouter();
-  const isEnglish = router.locale === 'en';
 
   return (
     <Layout>
@@ -25,10 +24,10 @@ export default function BlackBear() {
               transition={{ duration: 0.5 }}
             >
               <Link href="/projects" className="hover:text-white">
-                {isEnglish ? 'Projects & Research' : '專案與研究'}
+                {t('blackbearPage.breadcrumbBase')}
               </Link>
               <span className="mx-2">/</span>
-              <span>{isEnglish ? 'BlackBear Project' : 'BlackBear 開源計畫'}</span>
+              <span>{t('blackbearPage.breadcrumbCurrent')}</span>
             </motion.div>
             <motion.h1 
               className="text-4xl font-bold text-white mb-4"
@@ -36,7 +35,7 @@ export default function BlackBear() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              {isEnglish ? 'BlackBear Open Source Project' : 'BlackBear 開源計畫'}
+              {t('blackbearPage.title')}
             </motion.h1>
             <motion.div 
               className="w-24 h-1 bg-secondary mx-auto"
@@ -54,21 +53,31 @@ export default function BlackBear() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4 text-dark-blue">
-                {isEnglish ? 'High Performance Computing Simulation and Modeling' : '高效能運算模擬與建模'}
+                {t('blackbearPage.sectionTitle')}
               </h2>
               <p className="text-lg text-gray-600">
-                {isEnglish 
-                  ? 'An open-source project for advancing HPC education and research' 
-                  : '推進高效能運算教育和研究的開源專案'}
+                {t('blackbearPage.sectionSubtitle')}
               </p>
             </div>
             
             {/* 內容將在這裡填充 */}
             <div className="bg-gray-50 p-8 rounded-lg border border-gray-100">
-              <p className="text-center text-gray-500 italic">
-                {isEnglish ? 'Content coming soon...' : '內容即將推出...'}
-              </p>
-            </div>
+  <h3 className="text-2xl font-semibold text-dark-blue mb-4">
+    {t('blackbearPage.contentTitle')}
+  </h3>
+  <p className="mb-4 text-gray-700">
+    {t('blackbearPage.description')}
+  </p>
+  <h4 className="text-xl font-semibold text-dark-blue mb-2">
+    {t('blackbearPage.featuresTitle')}
+  </h4>
+  <ul className="list-disc pl-6 space-y-2 text-gray-700">
+    <li>{t('blackbearPage.feature1')}</li>
+    <li>{t('blackbearPage.feature2')}</li>
+    <li>{t('blackbearPage.feature3')}</li>
+    <li>{t('blackbearPage.feature4')}</li>
+  </ul>
+</div>
           </div>
         </div>
       </section>
