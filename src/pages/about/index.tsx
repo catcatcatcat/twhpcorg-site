@@ -116,8 +116,8 @@ export default function About() {
 
   return (
     <Layout>
-      {/* 頁面標題區 */}
-      <section className="relative py-20 bg-gradient-to-r from-dark-blue to-primary/90">
+      {/* 頁面標題區 - 增加與導覽列的距離 */}
+      <section className="relative pt-28 pb-20 bg-gradient-to-r from-dark-blue to-primary/90">
         <div className="absolute inset-0 bg-pattern opacity-10"></div>
         <div className="container-custom relative z-10">
           <div className="text-center">

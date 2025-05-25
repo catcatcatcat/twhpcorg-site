@@ -67,22 +67,8 @@ export default function Education() {
         <div className="absolute inset-0 bg-pattern opacity-10"></div>
         <div className="container-custom relative z-10">
           <div className="text-center">
-            <motion.div
-              className="text-sm text-white/80 mb-2"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <Link href="/" className="hover:text-white">
-                {isEnglish ? 'Home' : '首頁'}
-              </Link>
-              <span className="mx-2">/</span>
-              <Link href="#" className="hover:text-white">
-                {t('educationPage.breadcrumbBase')}
-              </Link>
-              <span className="mx-2">/</span>
-              <span>{t('educationPage.breadcrumbCurrent')}</span>
-            </motion.div>
+            {/* Navigation breadcrumb removed but keeping spacing with an empty div */}
+            <div className="h-6"></div>
             <motion.h1 
               className="text-4xl font-bold text-white mb-4"
               initial={{ opacity: 0, y: 20 }}
@@ -340,31 +326,7 @@ export default function Education() {
         </div>
       </section>
 
-      {/* 行動呼籲區塊 */}
-      <section className="py-16 bg-gradient-to-r from-primary/90 to-dark-blue text-white">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">
-              {isEnglish 
-                ? 'Ready to enhance your HPC and IC design skills?' 
-                : '準備好提升您的高效能運算和 IC 設計技能了嗎？'}
-            </h2>
-            <p className="text-xl mb-8 text-white/90">
-              {isEnglish 
-                ? 'Join our educational programs and become part of the next generation of HPC and IC design professionals.' 
-                : '加入我們的教育計畫，成為下一代高效能運算和 IC 設計專業人才的一份子。'}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/join-us" className="btn-secondary px-8 py-3 text-lg">
-                {isEnglish ? 'Join Our Programs' : '加入我們的課程'}
-              </Link>
-              <Link href="/contact" className="btn-outline border-white text-white hover:bg-white/20 px-8 py-3 text-lg">
-                {isEnglish ? 'Contact Us' : '聯絡我們'}
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Call to Action section removed as it's redundant with footer */}
     </Layout>
   );
 }
