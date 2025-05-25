@@ -7,13 +7,11 @@ const nextConfig = {
   ...(process.env.NODE_ENV !== 'production' ? { i18n } : {}),
   images: {
     domains: ['localhost'],
-    unoptimized: process.env.NODE_ENV === 'development' ? false : true,
+    unoptimized: true,
   },
-  // 只在生產環境啟用靜態輸出，開發環境使用正常的開發伺服器
-  ...(process.env.NODE_ENV === 'production' ? {
-    output: 'export',
-    trailingSlash: true,
-  } : {}),
+  // 啟用靜態輸出
+  output: 'export',
+  trailingSlash: true,
 }
 
 module.exports = nextConfig

@@ -7,8 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next build && next export"
+    "predeploy": "npm run build && touch out/.nojekyll",
+    "deploy": "gh-pages -d out -b gh-pages --dotfiles",
+    "deploy:clean": "gh-pages-clean && npm run deploy"
   },
+  "homepage": "https://test.catcatcatcat.cc",
   "dependencies": {
     "aos": "^2.3.4",
     "framer-motion": "^10.12.16",
@@ -25,9 +28,12 @@
     "@types/node": "^20.3.1",
     "@types/react": "^18.2.12",
     "@types/react-dom": "^18.2.5",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.42.0",
     "eslint-config-next": "^13.4.5",
+    "gh-pages": "^6.3.0",
+    "glob": "^11.0.2",
     "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2",
     "typescript": "^5.1.3"
