@@ -244,12 +244,12 @@ export default function About() {
                               </tr>
                             </thead>
                             <tbody>
-                              <tr><td>理事</td><td>楊光磊</td><td>產學創新學院執行長</td><td>臺灣科技大學</td></tr>
+                              <tr><td>理事</td><td>楊光磊</td><td>產學創新學院執行長</td><td>國立臺灣科技大學</td></tr>
                               <tr><td>理事</td><td>陳添福</td><td>教授</td><td>國立陽明交通大學</td></tr>
                               <tr><td>理事</td><td>鄭良加(工研院)</td><td>組長</td><td>工研院</td></tr>
                               <tr><td>理事</td><td>盧銘俊(工研院)</td><td>副所長</td><td>工研院</td></tr>
                               <tr><td>理事</td><td>郭致宏</td><td>副教授</td><td>國立成功大學</td></tr>
-                              <tr><td>理事</td><td>許志仲</td><td>副教授</td><td>國立成功大學</td></tr>
+                              <tr><td>理事</td><td>許志仲</td><td>副教授</td><td>國立陽明交通大學</td></tr>
                               <tr><td>理事</td><td>張亞寧</td><td>助理教授</td><td>國立成功大學</td></tr>
                               <tr><td>理事</td><td>陳坤志</td><td>副教授</td><td>國立陽明交通大學</td></tr>
                               <tr><td>理事</td><td>周政毅</td><td>資深工程師</td><td>個人開源貢獻者</td></tr>
@@ -269,7 +269,7 @@ export default function About() {
                               </tr>
                             </thead>
                             <tbody>
-                              <tr><td>常務監事</td><td>林偉棻</td><td>兼任教授</td><td>國立清華大學</td></tr>
+                              <tr><td>常務監事</td><td>林偉棻</td><td>兼任教授</td><td>國立清華大學、國立陽明交通大學、國立成功大學</td></tr>
                               <tr><td>監事</td><td>謝明得</td><td>教授</td><td>國立成功大學</td></tr>
                               <tr><td>監事</td><td>張益興</td><td>兼任教授</td><td>臺灣大學重點科技研究學院</td></tr>
                             </tbody>
