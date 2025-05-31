@@ -246,8 +246,8 @@ export default function About() {
                             <tbody>
                               <tr><td>理事</td><td>楊光磊</td><td>產學創新學院執行長</td><td>國立臺灣科技大學</td></tr>
                               <tr><td>理事</td><td>陳添福</td><td>教授</td><td>國立陽明交通大學</td></tr>
-                              <tr><td>理事</td><td>鄭良加(工研院)</td><td>組長</td><td>工研院</td></tr>
-                              <tr><td>理事</td><td>盧銘俊(工研院)</td><td>副所長</td><td>工研院</td></tr>
+                              <tr><td>理事</td><td>鄭良加</td><td>組長</td><td>工研院</td></tr>
+                              <tr><td>理事</td><td>盧銘俊</td><td>副所長</td><td>工研院</td></tr>
                               <tr><td>理事</td><td>郭致宏</td><td>副教授</td><td>國立成功大學</td></tr>
                               <tr><td>理事</td><td>許志仲</td><td>副教授</td><td>國立陽明交通大學</td></tr>
                               <tr><td>理事</td><td>張亞寧</td><td>助理教授</td><td>國立成功大學</td></tr>
