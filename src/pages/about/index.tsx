@@ -281,25 +281,7 @@ export default function About() {
                         <div className="space-y-8">
                           {/* 時間軸 */}
                           <div className="relative border-l-2 border-primary pl-8 ml-4 space-y-10">
-                            {/* 2023年 - 成立 */}
-                            <div className="relative">
-                              <div className="absolute -left-10 mt-1.5 h-6 w-6 rounded-full border-2 border-primary bg-white flex items-center justify-center">
-                                <div className="h-3 w-3 rounded-full bg-primary"></div>
-                              </div>
-                              <div className="mb-2">
-                                <span className="text-xl font-bold text-primary">2023</span>
-                              </div>
-                              <h4 className="text-lg font-semibold mb-2">
-                                {isEnglish ? 'Association Founding' : '協會成立'}
-                              </h4>
-                              <p className="text-gray-700">
-                                {isEnglish 
-                                  ? 'Taiwan High Performance Computing Education Association was officially established, bringing together experts from academia and industry to promote HPC education.' 
-                                  : '台灣高效能運算教育協會正式成立，匯集學界與產業專家，共同推動高效能運算教育。'}
-                              </p>
-                            </div>
-                            
-                            {/* 2024年 - 首次年會 */}
+                            {/* 2024年 - 協會成立 */}
                             <div className="relative">
                               <div className="absolute -left-10 mt-1.5 h-6 w-6 rounded-full border-2 border-primary bg-white flex items-center justify-center">
                                 <div className="h-3 w-3 rounded-full bg-primary"></div>
@@ -308,16 +290,16 @@ export default function About() {
                                 <span className="text-xl font-bold text-primary">2024</span>
                               </div>
                               <h4 className="text-lg font-semibold mb-2">
-                                {isEnglish ? 'First Annual Conference' : '首屆年度會議'}
+                                {isEnglish ? 'Association Established' : '協會成立'}
                               </h4>
                               <p className="text-gray-700">
                                 {isEnglish 
-                                  ? 'Held the first annual conference with over 200 participants from universities and industry partners. Launched the ACALSim platform and BlackBear open source project.' 
-                                  : '舉辦首屆年度會議，有超過200位來自大學和產業合作夥伴的參與者。正式發布 ACALSim 平台和 BlackBear 開源專案。'}
+                                  ? 'Taiwan High Performance Computing Education Association was officially established, bringing together experts from academia and industry to jointly promote high-performance computing education.' 
+                                  : '台灣高效能運算教育協會正式成立，匯集學界與產業專家，共同推動高效能運算教育。'}
                               </p>
                             </div>
                             
-                            {/* 2025年 - 教育計畫擴展 */}
+                            {/* 2025年 - 理監事會議與會員大會 */}
                             <div className="relative">
                               <div className="absolute -left-10 mt-1.5 h-6 w-6 rounded-full border-2 border-primary bg-white flex items-center justify-center">
                                 <div className="h-3 w-3 rounded-full bg-primary"></div>
@@ -326,12 +308,17 @@ export default function About() {
                                 <span className="text-xl font-bold text-primary">2025</span>
                               </div>
                               <h4 className="text-lg font-semibold mb-2">
-                                {isEnglish ? 'Education Program Expansion' : '教育計畫擴展'}
+                                {isEnglish ? 'Board Meetings and Annual Assembly' : '理監事會議與會員大會'}
                               </h4>
+                              <p className="text-gray-700 mb-3">
+                                {isEnglish 
+                                  ? 'In March, the board of directors and supervisors meeting was held to plan the annual execution goals.' 
+                                  : '三月舉辦理監事會議，規劃今年年度執行目標。'}
+                              </p>
                               <p className="text-gray-700">
                                 {isEnglish 
-                                  ? 'Expanded our education programs to 15 universities across Taiwan. Established industry partnership program with 8 leading technology companies.' 
-                                  : '將教育計畫擴展至全台15所大學。與8家領先科技公司建立產業合作夥伴計畫。'}
+                                  ? 'In June, the general assembly was held to report the annual plan to members, with plans to expand the association\'s education programs and seek corporate partnerships.' 
+                                  : '六月舉辦會員大會，向會員報告今年年度計畫，預計擴大協會教育計畫，及尋找企業夥伴。'}
                               </p>
                             </div>
                           </div>
@@ -363,11 +350,11 @@ export default function About() {
                             </div>
                           </div>
                           
-                          {/* 2023年報告 */}
+                          {/* 2024年報告 */}
                           <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-shadow">
                             <div className="flex items-center justify-between mb-4">
                               <h4 className="text-xl font-bold text-dark-blue">
-                                {isEnglish ? '2023 Annual Report' : '2023 年度報告'}
+                                {isEnglish ? '2024 Annual Report' : '2024 年度報告'}
                               </h4>
                               <span className="bg-gray-200 text-gray-600 px-3 py-1 rounded-full text-sm font-medium">
                                 {isEnglish ? 'Archive' : '存檔'}
