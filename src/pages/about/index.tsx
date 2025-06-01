@@ -396,16 +396,16 @@ export default function About() {
                           </h3>
                           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                             {[
-                              { name: isEnglish ? 'National Taiwan University' : '國立臺灣大學', logo: '/images/partners/ntu-logo.png' },
-                              { name: isEnglish ? 'National Yang Ming Chiao Tung University' : '國立陽明交通大學', logo: '/images/partners/nycu-logo.png' },
-                              { name: isEnglish ? 'National Cheng Kung University' : '國立成功大學', logo: '/images/partners/ncku-logo.png' },
-                              { name: isEnglish ? 'National Tsing Hua University' : '國立清華大學', logo: '/images/partners/nthu-logo.png' },
-                              { name: isEnglish ? 'National Taiwan University of Science and Technology' : '國立臺灣科技大學', logo: '/images/partners/ntust-logo.png' },
-                              { name: isEnglish ? 'National Taiwan Normal University' : '國立臺灣師範大學', logo: '/images/partners/ntnu-logo.png' }
+                              { name: isEnglish ? 'University A' : '大學 A', letter: 'A' },
+                              { name: isEnglish ? 'University B' : '大學 B', letter: 'B' },
+                              { name: isEnglish ? 'University C' : '大學 C', letter: 'C' },
+                              { name: isEnglish ? 'University D' : '大學 D', letter: 'D' },
+                              { name: isEnglish ? 'University E' : '大學 E', letter: 'E' },
+                              { name: isEnglish ? 'University F' : '大學 F', letter: 'F' }
                             ].map((partner, index) => (
                               <div key={index} className="bg-gray-50 p-4 rounded-lg border border-gray-100 flex flex-col items-center justify-center text-center hover:shadow-md transition-shadow">
                                 <div className="w-16 h-16 bg-gray-200 rounded-full mb-3 flex items-center justify-center">
-                                  <span className="text-2xl font-bold text-primary">{partner.name.charAt(0)}</span>
+                                  <span className="text-2xl font-bold text-primary">{partner.letter}</span>
                                 </div>
                                 <p className="font-medium text-gray-800">{partner.name}</p>
                               </div>
@@ -420,18 +420,18 @@ export default function About() {
                           </h3>
                           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                             {[
-                              { name: 'TSMC', logo: '/images/partners/tsmc-logo.png' },
-                              { name: 'MediaTek', logo: '/images/partners/mediatek-logo.png' },
-                              { name: 'ITRI', logo: '/images/partners/itri-logo.png' },
-                              { name: 'Synopsys Taiwan', logo: '/images/partners/synopsys-logo.png' },
-                              { name: 'Cadence Taiwan', logo: '/images/partners/cadence-logo.png' },
-                              { name: 'Siemens EDA', logo: '/images/partners/siemens-logo.png' },
-                              { name: 'AMD Taiwan', logo: '/images/partners/amd-logo.png' },
-                              { name: 'NVIDIA Taiwan', logo: '/images/partners/nvidia-logo.png' }
+                              { name: isEnglish ? 'Company A' : '公司 A', letter: 'A' },
+                              { name: isEnglish ? 'Company B' : '公司 B', letter: 'B' },
+                              { name: isEnglish ? 'Company C' : '公司 C', letter: 'C' },
+                              { name: isEnglish ? 'Company D' : '公司 D', letter: 'D' },
+                              { name: isEnglish ? 'Company E' : '公司 E', letter: 'E' },
+                              { name: isEnglish ? 'Company F' : '公司 F', letter: 'F' },
+                              { name: isEnglish ? 'Company G' : '公司 G', letter: 'G' },
+                              { name: isEnglish ? 'Company H' : '公司 H', letter: 'H' }
                             ].map((partner, index) => (
                               <div key={index} className="bg-gray-50 p-4 rounded-lg border border-gray-100 flex flex-col items-center justify-center text-center hover:shadow-md transition-shadow">
                                 <div className="w-12 h-12 bg-gray-200 rounded-full mb-3 flex items-center justify-center">
-                                  <span className="text-xl font-bold text-primary">{partner.name.charAt(0)}</span>
+                                  <span className="text-xl font-bold text-primary">{partner.letter}</span>
                                 </div>
                                 <p className="font-medium text-gray-800">{partner.name}</p>
                               </div>
